@@ -53,7 +53,7 @@ both `background-image` and `background-position`.
 Image replacement technique is to replace a normal text element with an image.
 There are many methods such as H5BP and Scott Kellum, as suggested [here](https://css-tricks.com/the-image-replacement-museum/).
 
-My faviourite is H5BP, as it is the simplest and most intuitive one.
+My favourite is H5BP, as it is the simplest and most intuitive one.
 
 #### How would you approach fixing browser-specific styling issues?
 
