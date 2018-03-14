@@ -17,7 +17,9 @@ We can enforce browsers to use standards mode with a `<!DOCTYPE html>` tag.
 
 #### What's the difference between HTML and XHTML?
 
-*Not answered yet*
+XHTML is based on XML, and thus requires the source to be well-formed. Since XHTML is more strict than HTML, less pre-processing is needed by the rendering engine.
+
+XHTML should be served as application/xhtml+xml for you to take advantage of the benefits, otherwise XHTML will be treated as ordinary HTML. Serving it as 'application/xhtml+xml' is not common on the web due to Internet Explorer, which cannot handle XHTML.
 
 #### Are there any problems with serving pages as `application/xhtml+xml`?
 
