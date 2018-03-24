@@ -7,7 +7,9 @@ parent nodes. However, the original element where the event occurs, called
 'target', stays the same in the event object. Using the `target` property, we
 can always keep tracking which element actually causes an event captured by
 its parent, and it can help use reduce the number of event handlers as we
-sometimes don't need to add event listeners for every element.
+sometimes don't need to add event listeners for every element(requires much
+less memory).
+
 
 #### Explain how `this` works in JavaScript
 
