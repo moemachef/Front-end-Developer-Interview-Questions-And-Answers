@@ -26,8 +26,12 @@ AMD (Asynchronous Module Definition) was born as CommonJS wasn’t suited for th
 
 
 #### Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
+An IIFE (pronouced as ‘iffy’) is an abbreviation for Immediately Invoked Function Expression. It is a common Javascript design pattern used by popular JS libraries such as jQuery, Backbone.js. Purpose of using an IIFE is to maintain code inside of a local scope. This means, to be able to use global object inside of IIFE, you will need to pass it as arguments.
 
-*Not answered yet*
+As for an explanation, the following code doesn’t work as an IIFE because it is a function declaration, it does invoked immediately due to its parenthesis at the end, but there are downsides to using this approach.
+
+```function foo() {}()```;
+
 
 ###### What needs to be changed to properly make it an IIFE?
 
