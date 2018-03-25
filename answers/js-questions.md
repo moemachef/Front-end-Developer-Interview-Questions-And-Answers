@@ -82,7 +82,7 @@ Since Anonymous Functions are function expressions rather than the regular funct
 
 #### How do you organize your code? (module pattern, classical inheritance?)
 
-*Not answered yet*
+There are several options in implementing Module Pattern. An option I mostly use is Object Literal Notation for encapsulating and organizing my code, but upon further readings, Module Pattern using Anonymous Closures, Global Import, and Module Export have sparked my interest as it provides more features for private and public var/methods. It still uses object literal but as to return values from the scoping function.
 
 #### What's the difference between host objects and native objects?
 
