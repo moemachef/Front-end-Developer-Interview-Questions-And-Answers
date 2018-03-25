@@ -94,17 +94,15 @@ There are several options in implementing Module Pattern. An option I mostly use
 
 ```function Person() {}```
 
-Code above declares a function statement (statements perform an action) but does not execute, however, it does get registered into the global namespace.
+Function Declaration: Code above declares a function statement (statements perform an action) but does not execute, however, it does get registered into the global namespace.
 
 ```var person = Person()```
 
-Function Expression
-A variable ‘var person’ has been defined and contains a value reference to a Person function. Any JavaScript Expressions (including Function Expressions) always returns a value. This may also be an Anonymous function if no name has been assign to a function but wrapped in parenthesis to be interpreted as an expression.
+Function Expression: A variable ‘var person’ has been defined and contains a value reference to a Person function. Any JavaScript Expressions (including Function Expressions) always returns a value. This may also be an Anonymous function if no name has been assign to a function but wrapped in parenthesis to be interpreted as an expression.
 
 ```var person = new Person()```
 
-Function Constructor
-By adding the keyword ‘new’. We are instantiating a new object of the Person class constructor. A function declaration is just a regular function unless it has been instantiated, it then becomes a class constructor.
+Function Constructor: By adding the keyword ‘new’. We are instantiating a new object of the Person class constructor. A function declaration is just a regular function unless it has been instantiated, it then becomes a class constructor.
 
 #### What's the difference between `.call` and `.apply`?
 
