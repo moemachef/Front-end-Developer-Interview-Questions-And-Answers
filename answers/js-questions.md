@@ -243,7 +243,13 @@ let duplicate = (arr) => arr.concat(arr);
 
 #### Why is it called a Ternary expression, what does the word "Ternary" indicate?
 
-*Not answered yet*
+The word “ternary” comes from the n-ary word setup. Other examples of n-ary words are unary and binary. All of these (including ternary) are operands. The prefix section of their name lists how many inputs the operand accepts.
+
+A unary operand accepts one parameter, e.g. -1, where - is the operand, and 1 is the parameter.
+
+A binary operand accepts two parameters, e.g. 2 + 3, where + is the operand, and 2 and 3 are the parameters.
+
+So a ternary operand accepts three parameters.
 
 #### What is `"use strict";`? what are the advantages and disadvantages to using it?
 
