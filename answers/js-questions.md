@@ -204,7 +204,8 @@ DOM tree.
 
 #### Why is extending built-in JavaScript objects not a good idea?
 
-*Not answered yet*
+1.JavaScript may implement their own version of your custom method in the future (using the same name) and this will override your custom method.
+2.Modifying the behaviour of current built-in JS objects is not a good practice as it breaks its default functionality and it will break your code using that specific built-in JS object method or property.
 
 #### Difference between document load event and document ready event?
 
