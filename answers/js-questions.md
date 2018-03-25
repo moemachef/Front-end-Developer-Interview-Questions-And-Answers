@@ -276,7 +276,7 @@ The primary reason why global variables are discouraged in javascript is because
 
 #### Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 
-*Not answered yet*
+The load event fires at the end of the document loading process. At this point, all of the objects in the document are in the DOM, and all the images, scripts, links and sub-frames have finished loading. To execute anything post document load, we fire these events. ‘DOMContentLoaded’ or jQuery’s loaded are another options.
 
 #### Explain what a single page app is and how to make one SEO-friendly.
 
