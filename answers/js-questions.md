@@ -167,6 +167,8 @@ console.log(navigator.userAgent); // "Mozilla/5.0 (Macintosh; ..."
 
 Simply put, AJAX is the use of JavaScript to send and receive using HTTP without reloading the page. AJAX is an acronym for asynchronous JavaScript and XML, and is used as a technique for creating client-side asynchronous web applications. AJAX is considered a group of technologies. HTML and CSS can be used in combination to mark up and style information. JavaScript and the XMLHttpRequest object provide the method for exchanging data asynchronously between the browser and the server.
 
+AJAX provides more efficient and smoother running applications, which gives users better interactive experiences.
+
 https://medium.com/@morgan_ashley/front-end-developer-interview-question-03-4b8c94a42442
 
 #### Explain how JSONP works (and how it's not really AJAX).
