@@ -134,7 +134,9 @@ https://medium.com/@rlynjb/js-interview-question-explain-function-prototype-bind
 
 #### When would you use `document.write()`?
 
-When someone gives me one million dollar for doing it.
+When document.write() is executed after page load, it replaces the entire header and body tag with the given parameter value in string. The only seem appropriate usage for document.write() is when working third parties like Google Analytics and such for including their scripts. This is because document.write() is mostly available in any browser. Since third party companies have no control over the user’s browser dependencies (ex. jQuery), document.write() can be used as a fallback or a default method.
+
+https://medium.com/@rlynjb/js-interview-question-when-would-you-use-document-write-ccc199137715
 
 #### What's the difference between feature detection, feature inference, and using the UA string?
 
