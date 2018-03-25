@@ -346,3 +346,6 @@ Unobtrusive is a JavaScript methodology that helps overcome browser inconsistenc
 
 #### When should you use classical inheritance?
 The answer is never or almost never or if all options are exhausted.
+
+#### What is Recursion ?
+Recursion is when a function call it self until it doesn't.
