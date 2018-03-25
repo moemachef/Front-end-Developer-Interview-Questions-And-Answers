@@ -348,4 +348,4 @@ Unobtrusive is a JavaScript methodology that helps overcome browser inconsistenc
 The answer is never or almost never or if all options are exhausted.
 
 #### What is Recursion ?
-Recursion is when a function call it self until it doesn't.
+Recursion in JavaScript is, simply put, the ability to call a function from within itself.
