@@ -312,7 +312,7 @@ Web/Browser console using console.log. Firebug, Developer Tools, stop points
 
 #### What language constructions do you use for iterating over object properties and array items?
 
-*Not answered yet*
+for loop, for..in, for each..in, map, reduce etc.
 
 #### Explain the difference between mutable and immutable objects.
 #### What is an example of an immutable object in JavaScript?
