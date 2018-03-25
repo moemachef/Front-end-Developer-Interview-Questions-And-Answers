@@ -325,7 +325,9 @@ https://www.sitepoint.com/immutability-javascript/
 
 #### Explain the difference between synchronous and asynchronous functions.
 
-*Not answered yet*
+Synchronous: Step wise execution. Next line executed after first. 
+
+Asynchronous: Execution moves to next step before first is finished. 
 
 #### What is event loop?
 #### What is the difference between call stack and task queue?
