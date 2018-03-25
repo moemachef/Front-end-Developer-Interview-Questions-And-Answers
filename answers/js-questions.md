@@ -57,8 +57,15 @@ For the above code to be considered an IIFE, it needs to be an anonymous functio
 
 #### What's the difference between a variable that is: `null`, `undefined` or undeclared?
 ###### How would you go about checking for any of these states?
+undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’.
 
-*Not answered yet*
+
+null is a value of a variable and is a type of object.
+
+
+undeclared variables is a variable that has been declared without ‘var’ keyword.
+
+We use ‘console.log();’ and ‘type of’ to check if a variable is undefined or null.
 
 #### What is a closure, and how/why would you use one?
 
