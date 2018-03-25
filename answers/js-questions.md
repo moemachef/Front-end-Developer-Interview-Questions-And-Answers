@@ -342,7 +342,7 @@ It is a constantly running process that checks if the call stack is empty. Imagi
 
 
 #### What does unobtrusive mean in JavaScript?
-Unobtrusive is a JavaScript methodology that helps overcome browser inconsistencies through the separation of page functionality and structure
+Unobtrusive is a JavaScript methodology that helps overcome browser inconsistencies through the separation of page functionality and structure.
 
 #### When should you use classical inheritance?
-The answer is never or almost never or if all options are exhausted
+The answer is never or almost never or if all options are exhausted.
