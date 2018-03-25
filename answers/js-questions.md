@@ -55,8 +55,7 @@ For the above code to be considered an IIFE, it needs to be an anonymous functio
 (function foo() { }());
 ```
 
-#### What's the difference between a variable that is: `null`, `undefined` or undeclared?
-#### How would you go about checking for any of these states?
+#### What's the difference between a variable that is: `null`, `undefined` or undeclared? and How would you go about checking for any of these states?
 
 undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’.
 
