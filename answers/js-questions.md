@@ -106,7 +106,20 @@ Function Constructor: By adding the keyword ‘new’. We are instantiating a ne
 
 #### What's the difference between `.call` and `.apply`?
 
-*Not answered yet*
+Invoking a function with .apply and .call allows us to point an object to the invoked function by passing in the object as first argument and second argument (and so on) as its values.
+The function’s ‘this’ keyword will be manipulated when invoked with .apply or .call.
+From what I understand, .apply and .call are methods we use to assign the ‘this’ keyword from the invoked function to reference to an object for the duration of the method invocation.
+
+Besides passing in an argument to a .call or .apply methods that references to the ‘this’ keyword of an invoked function, we can also pass in a 2nd argument or more. A good mnemonic to explain their differences are:
+
+.Call Counts the number of arguments separated by Comma
+.call method accepts one or more arguments as objects and requires to be listed explicitly, means, it is a fixed number of arguments.
+
+.Apply uses Array as an Argument
+.apply method requires an array as its 2nd argument. This method is used if you don’t know the number of arguments to be passed or the arguments is already in an array.
+
+
+https://medium.com/@rlynjb/js-interview-question-what-s-the-difference-between-call-and-apply-84e6c6b84f20
 
 #### Explain `Function.prototype.bind`.
 
