@@ -299,7 +299,8 @@ Polyfills:
 
 #### What are the pros and cons of using Promises instead of callbacks?
 
-*Not answered yet*
+pros - solves the problem of callback hell.
+cons - currently require external library or polyfill to achieve this.
 
 #### What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
