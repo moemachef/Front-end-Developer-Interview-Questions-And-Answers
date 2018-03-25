@@ -189,6 +189,8 @@ Handlebars, Mustache, etc.
 Declarations are put into memory during the compile mode which means a variable can be used before it has been declared.
 Function expressions are not hoisted and therefore can not be used before they have been defined. Arrow functions are like function expressions and therefore are not hoisted either.
 
+https://medium.com/bluekiri/the-confusion-of-javascript-scope-and-hoisting-3e9c759eb419
+
 #### Describe event bubbling.
 
 It's when an event is bubbled into container elements, in the higher level of a
