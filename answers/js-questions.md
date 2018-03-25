@@ -1,6 +1,6 @@
 # JS Questions
 
-#### Explain event delegation
+###### Explain event delegation
 
 When an event is fired from an element, the event will be bubbled up to its
 parent nodes. However, the original element where the event occurs, called
@@ -11,14 +11,14 @@ sometimes don't need to add event listeners for every element (requires much
 less memory).
 
 
-#### Explain how `this` works in JavaScript
+###### Explain how `this` works in JavaScript
 A function's this keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between strict mode and non-strict mode.
 
 In most cases, the value of this is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the bind method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding (it retains the this value of the enclosing lexical context).
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
-#### Explain how prototypal inheritance works
+###### Explain how prototypal inheritance works
 
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not provide a class implementation per se (the class keyword is introduced in ES2015, but is syntactical sugar, JavaScript remains prototype-based).
 
@@ -32,13 +32,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prot
 
 https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9
 
-#### What do you think of AMD vs CommonJS?
+###### What do you think of AMD vs CommonJS?
 
 CommonJS using the keywords require and exports. require is a function used to import functions from another module. exports is an object where any function put into it will get exported. NodeJS implementation They are heavily influenced by CommonJS specification. The major difference arises in the exports object. NodeJS modules use module.exports as the object to get exported while CommonJS uses just the exports variable.
 AMD (Asynchronous Module Definition) was born as CommonJS wasn’t suited for the browsers early on. As the name implies, it supports asynchronous module loading. The function is called only when the requested modules are finished loading. The define function takes the first argument as an array of dependency modules. These modules are loaded in a non-blocking manner in the background and once the loading is completed, the callback function is executed.
 
 
-#### Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
+###### Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
 An IIFE (pronouced as ‘iffy’) is an abbreviation for Immediately Invoked Function Expression. It is a common Javascript design pattern used by popular JS libraries such as jQuery, Backbone.js. Purpose of using an IIFE is to maintain code inside of a local scope. This means, to be able to use global object inside of IIFE, you will need to pass it as arguments.
 
 As for an explanation, the following code doesn’t work as an IIFE because it is a function declaration, it does invoked immediately due to its parenthesis at the end, but there are downsides to using this approach.
@@ -55,7 +55,7 @@ For the above code to be considered an IIFE, it needs to be an anonymous functio
 (function foo() { }());
 ```
 
-#### What's the difference between a variable that is: `null`, `undefined` or undeclared?
+###### What's the difference between a variable that is: `null`, `undefined` or undeclared?
 ###### How would you go about checking for any of these states?
 undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’.
 
@@ -67,7 +67,7 @@ undeclared variables is a variable that has been declared without ‘var’ keyw
 
 We use ‘console.log();’ and ‘type of’ to check if a variable is undefined or null.
 
-#### What is a closure, and how/why would you use one?
+###### What is a closure, and how/why would you use one?
 
 Closures are inner functions inside of an outer function. They have their own local scope and has access to outer function’s scope, parameters (but NOT arguments object), and they also have access to global variables.
 
@@ -76,21 +76,21 @@ https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-w
 
 http://javascriptissexy.com/understand-javascript-closures-with-ease/
 
-#### What's a typical use case for anonymous functions?
+###### What's a typical use case for anonymous functions?
 
 Since Anonymous Functions are function expressions rather than the regular function declaration which are statements. Function expressions are more flexible. We can assign functions to variables, object properties, pass them as arguments to other functions, and even write a simple one line code enclosed in an anonymous functions.
 
-#### How do you organize your code? (module pattern, classical inheritance?)
+###### How do you organize your code? (module pattern, classical inheritance?)
 
 There are several options in implementing Module Pattern. An option I mostly use is Object Literal Notation for encapsulating and organizing my code, but upon further readings, Module Pattern using Anonymous Closures, Global Import, and Module Export have sparked my interest as it provides more features for private and public var/methods. It still uses object literal but as to return values from the scoping function.
 
-#### What's the difference between host objects and native objects?
+###### What's the difference between host objects and native objects?
 
 - Host objects: what an environment(browser, Node.js, etc) provides
 - Native objects: what JavaScript provides
 
 
-#### Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+###### Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
 ```function Person() {}```
 
@@ -104,7 +104,7 @@ Function Expression: A variable ‘var person’ has been defined and contains a
 
 Function Constructor: By adding the keyword ‘new’. We are instantiating a new object of the Person class constructor. A function declaration is just a regular function unless it has been instantiated, it then becomes a class constructor.
 
-#### What's the difference between `.call` and `.apply`?
+###### What's the difference between `.call` and `.apply`?
 
 Invoking a function with .apply and .call allows us to point an object to the invoked function by passing in the object as first argument and second argument (and so on) as its values.
 The function’s ‘this’ keyword will be manipulated when invoked with .apply or .call.
@@ -121,7 +121,7 @@ Besides passing in an argument to a .call or .apply methods that references to t
 
 https://medium.com/@rlynjb/js-interview-question-what-s-the-difference-between-call-and-apply-84e6c6b84f20
 
-#### Explain `Function.prototype.bind`.
+###### Explain `Function.prototype.bind`.
 
 To avoid polluting an outer function’s scope, we can use bind method instead. Once we invoked a function with bind method, it bounds our closure or inner function with the outer function’s scope.
 
@@ -132,13 +132,13 @@ Functions invoked with apply() & call() methods gets executed first and of cours
 
 https://medium.com/@rlynjb/js-interview-question-explain-function-prototype-bind-bbdaed41bd89
 
-#### When would you use `document.write()`?
+###### When would you use `document.write()`?
 
 When document.write() is executed after page load, it replaces the entire header and body tag with the given parameter value in string. The only seem appropriate usage for document.write() is when working third parties like Google Analytics and such for including their scripts. This is because document.write() is mostly available in any browser. Since third party companies have no control over the user’s browser dependencies (ex. jQuery), document.write() can be used as a fallback or a default method.
 
 https://medium.com/@rlynjb/js-interview-question-when-would-you-use-document-write-ccc199137715
 
-#### What's the difference between feature detection, feature inference, and using the UA string?
+###### What's the difference between feature detection, feature inference, and using the UA string?
 
 - Feature detection: directly check if a feature is implemented
 
@@ -163,7 +163,7 @@ if (MozSmsMessage) {
 console.log(navigator.userAgent); // "Mozilla/5.0 (Macintosh; ..."
 ```
 
-#### Explain AJAX in as much detail as possible.
+###### Explain AJAX in as much detail as possible.
 
 Simply put, AJAX is the use of JavaScript to send and receive using HTTP without reloading the page. AJAX is an acronym for asynchronous JavaScript and XML, and is used as a technique for creating client-side asynchronous web applications. AJAX is considered a group of technologies. HTML and CSS can be used in combination to mark up and style information. JavaScript and the XMLHttpRequest object provide the method for exchanging data asynchronously between the browser and the server.
 
@@ -171,13 +171,13 @@ AJAX provides more efficient and smoother running applications, which gives user
 
 https://medium.com/@morgan_ashley/front-end-developer-interview-question-03-4b8c94a42442
 
-#### Explain how JSONP works (and how it's not really AJAX).
+###### Explain how JSONP works (and how it's not really AJAX).
 
 A JSONP response contains a callback function usually written in JavaScript,
 and when the response is flushed, the callback will be launched. It's more like
 script tag injection, rather than AJAX.
 
-#### Have you ever used JavaScript templating?
+###### Have you ever used JavaScript templating?
 
 Yes.
 
@@ -185,43 +185,43 @@ Yes.
 
 Handlebars, Mustache, etc.
 
-#### Explain "hoisting".
+###### Explain "hoisting".
 Declarations are put into memory during the compile mode which means a variable can be used before it has been declared.
 In compile mode the value is not stored, only the variable declaration. What is hoisted or stored in memory during compile mode is what goes before the = and not what is after it.
 Function expressions are not hoisted and therefore can not be used before they have been defined. Arrow functions are like function expressions and therefore are not hoisted either.
 
 https://medium.com/bluekiri/the-confusion-of-javascript-scope-and-hoisting-3e9c759eb419
 
-#### Describe event bubbling.
+###### Describe event bubbling.
 
 It's when an event is bubbled into container elements, in the higher level of a
 DOM tree.
 
-#### What's the difference between an "attribute" and a "property"?
+###### What's the difference between an "attribute" and a "property"?
 
 - Attribute: specified in HTML, always in the form of string
 - Property: specified in DOM object, can have any type of JavaScript
 
-#### Why is extending built-in JavaScript objects not a good idea?
+###### Why is extending built-in JavaScript objects not a good idea?
 
 *Not answered yet*
 
-#### Difference between document load event and document ready event?
+###### Difference between document load event and document ready event?
 
 - document ready: when a HTML document is loaded and rendered
 - document load: when a HTML document and assets in the document are all loaded
   and rendered
 
-#### What is the difference between `==` and `===`?
+###### What is the difference between `==` and `===`?
 
 *Not answered yet*
 
-#### Explain the same-origin policy with regards to JavaScript.
+###### Explain the same-origin policy with regards to JavaScript.
 
 Same-origin means having same host, port and protocol(HTTP or HTTPS). If a
 script in the different origin should be accessed, we can consider using CORS.
 
-#### Make this work:
+###### Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
@@ -230,11 +230,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 let duplicate = (arr) => arr.concat(arr);
 ```
 
-#### Why is it called a Ternary expression, what does the word "Ternary" indicate?
+###### Why is it called a Ternary expression, what does the word "Ternary" indicate?
 
 *Not answered yet*
 
-#### What is `"use strict";`? what are the advantages and disadvantages to using it?
+###### What is `"use strict";`? what are the advantages and disadvantages to using it?
 
 Advantages
 
@@ -249,54 +249,54 @@ Disadvantage
 - When using global strict mode and concatenating the script with other scripts
   not using strict mode, the other scripts can be broken.
 
-#### Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+###### Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 
 *Not answered yet*
 
-#### Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+###### Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
 *Not answered yet*
 
-#### Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+###### Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 
 *Not answered yet*
 
-#### Explain what a single page app is and how to make one SEO-friendly.
+###### Explain what a single page app is and how to make one SEO-friendly.
 
 *Not answered yet*
 
-#### What is the extent of your experience with Promises and/or their polyfills?
+###### What is the extent of your experience with Promises and/or their polyfills?
 
 *Not answered yet*
 
-#### What are the pros and cons of using Promises instead of callbacks?
+###### What are the pros and cons of using Promises instead of callbacks?
 
 *Not answered yet*
 
-#### What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+###### What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
 *Not answered yet*
 
-#### What tools and techniques do you use debugging JavaScript code?
+###### What tools and techniques do you use debugging JavaScript code?
 
 *Not answered yet*
 
-#### What language constructions do you use for iterating over object properties and array items?
+###### What language constructions do you use for iterating over object properties and array items?
 
 *Not answered yet*
 
-#### Explain the difference between mutable and immutable objects.
+###### Explain the difference between mutable and immutable objects.
 ###### What is an example of an immutable object in JavaScript?
 ###### What are the pros and cons of immutability?
 ###### How can you achieve immutability in your own code?
 
 *Not answered yet*
 
-#### Explain the difference between synchronous and asynchronous functions.
+###### Explain the difference between synchronous and asynchronous functions.
 
 *Not answered yet*
 
-#### What is event loop?
+###### What is event loop?
 ###### What is the difference between call stack and task queue?
 
 *Not answered yet*
