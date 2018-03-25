@@ -78,7 +78,7 @@ http://javascriptissexy.com/understand-javascript-closures-with-ease/
 
 #### What's a typical use case for anonymous functions?
 
-*Not answered yet*
+Since Anonymous Functions are function expressions rather than the regular function declaration which are statements. Function expressions are more flexible. We can assign functions to variables, object properties, pass them as arguments to other functions, and even write a simple one line code enclosed in an anonymous functions.
 
 #### How do you organize your code? (module pattern, classical inheritance?)
 
