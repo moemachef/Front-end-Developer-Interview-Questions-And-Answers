@@ -123,7 +123,14 @@ https://medium.com/@rlynjb/js-interview-question-what-s-the-difference-between-c
 
 #### Explain `Function.prototype.bind`.
 
-*Not answered yet*
+To avoid polluting an outer function’s scope, we can use bind method instead. Once we invoked a function with bind method, it bounds our closure or inner function with the outer function’s scope.
+
+There are other methods of setting the scope of a function. Other two are apply() and call().
+Difference between apply() & call() and bind() method is:
+
+Functions invoked with apply() & call() methods gets executed first and of course, we also pass along the function’s scope as well while Functions invoked with bind() method just sets the scope, but doesn’t get executed.
+
+https://medium.com/@rlynjb/js-interview-question-explain-function-prototype-bind-bbdaed41bd89
 
 #### When would you use `document.write()`?
 
