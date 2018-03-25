@@ -301,3 +301,6 @@ Disadvantage
 
 *Not answered yet*
 
+
+###### What does unobtrusive mean in JavaScript?
+Unobtrusive is a JavaScript methodology that helps overcome browser inconsistencies through the separation of page functionality and structure
