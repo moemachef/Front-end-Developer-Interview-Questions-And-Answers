@@ -272,7 +272,7 @@ Disadvantage
 
 #### Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
-*Not answered yet*
+The primary reason why global variables are discouraged in javascript is because, in javascript all code share a single global namespace, also javascript has implied global variables i.e. variables which are not explicitly declared in local scope are automatically added to global namespace. Relying too much on global variables can result in collisions between various scripts on the same page
 
 #### Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 
