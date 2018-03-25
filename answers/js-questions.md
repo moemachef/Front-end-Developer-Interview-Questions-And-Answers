@@ -186,8 +186,8 @@ Yes.
 Handlebars, Mustache, etc.
 
 #### Explain "hoisting".
-
-*Not answered yet*
+Declarations are put into memory during the compile mode which means a variable can be used before it has been declared.
+Function expressions are not hoisted and therefore can not be used before they have been defined. Arrow functions are like function expressions and therefore are not hoisted either.
 
 #### Describe event bubbling.
 
