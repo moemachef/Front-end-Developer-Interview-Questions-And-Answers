@@ -69,7 +69,10 @@ We use ‘console.log();’ and ‘type of’ to check if a variable is undefine
 
 #### What is a closure, and how/why would you use one?
 
-*Not answered yet*
+Closures are inner functions inside of an outer function. They have their own local scope and has access to outer function’s scope, parameters (but NOT arguments object), and they also have access to global variables.
+
+
+https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6
 
 #### What's a typical use case for anonymous functions?
 
