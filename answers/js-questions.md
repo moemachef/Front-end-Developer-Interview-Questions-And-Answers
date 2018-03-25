@@ -74,6 +74,8 @@ Closures are inner functions inside of an outer function. They have their own lo
 
 https://medium.com/@rlynjb/js-interview-question-what-is-a-closure-and-how-why-would-you-use-one-b6fd45ea95f6
 
+http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
 #### What's a typical use case for anonymous functions?
 
 *Not answered yet*
