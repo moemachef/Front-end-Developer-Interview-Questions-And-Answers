@@ -288,7 +288,14 @@ https://cdnjs.com/libraries/backbone.js/tutorials/seo-for-single-page-apps
 
 #### What is the extent of your experience with Promises and/or their polyfills?
 
-*Not answered yet*
+The biggest advangtage of Promise is that it solves the problem of callback hell. the biggest disadvantage currently require external library or polyfill to achieve this.
+
+Polyfills:
+
+- jQuery - Deferred
+- Bluebird
+- Q
+- When
 
 #### What are the pros and cons of using Promises instead of callbacks?
 
