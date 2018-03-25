@@ -217,7 +217,13 @@ DOM tree.
 
 #### What is the difference between `==` and `===`?
 
-*Not answered yet*
+By using = you assign a value to something.
+
+By using == you check if something is equal to something else. This is not strict
+
+By using === you check if something is equal to something else. This is also strict.
+
+
 
 #### Explain the same-origin policy with regards to JavaScript.
 
