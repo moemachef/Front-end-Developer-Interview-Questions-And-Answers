@@ -308,7 +308,7 @@ CoffeeScript. Pros/Cons: Syntactic sugar, readable code, and use of good pattern
 
 #### What tools and techniques do you use debugging JavaScript code?
 
-*Not answered yet*
+Web/Browser console using console.log. Firebug, Developer Tools, stop points
 
 #### What language constructions do you use for iterating over object properties and array items?
 
