@@ -280,7 +280,11 @@ The load event fires at the end of the document loading process. At this point, 
 
 #### Explain what a single page app is and how to make one SEO-friendly.
 
-*Not answered yet*
+SPA is a web application or web site that fits on a single web page with the goal of providing a more fluid user experience similar to a desktop application. In a SPA, either all necessary code — HTML, JavaScript, and CSS — is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.
+
+https://stackoverflow.com/questions/20048476/how-to-improve-seo-for-single-page-application
+
+https://cdnjs.com/libraries/backbone.js/tutorials/seo-for-single-page-apps
 
 #### What is the extent of your experience with Promises and/or their polyfills?
 
