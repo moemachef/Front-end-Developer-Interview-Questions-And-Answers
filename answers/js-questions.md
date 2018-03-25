@@ -223,6 +223,8 @@ By using == you check if something is equal to something else. This is not stric
 
 By using === you check if something is equal to something else. This is also strict.
 
+Strict is that it checks not only the equality of the two values, it compares the types of the two values too. Using == will try and convert one side of the expression to be the same type as the other
+
 
 
 #### Explain the same-origin policy with regards to JavaScript.
