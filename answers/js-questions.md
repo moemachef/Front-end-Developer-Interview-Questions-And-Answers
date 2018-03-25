@@ -330,6 +330,9 @@ Synchronous: Step wise execution. Next line executed after first.
 Asynchronous: Execution moves to next step before first is finished. 
 
 #### What is event loop?
+
+It is a constantly running process that checks if the call stack is empty. Imagine it like a clock and every time it ticks it looks at the Call Stack and if it is empty it looks into the Event Queue. If there is something in the event queue that is waiting it is moved to the call stack. If not, then nothing happens.
+
 #### What is the difference between call stack and task queue?
 
 *Not answered yet*
