@@ -319,7 +319,9 @@ for loop, for..in, for each..in, map, reduce etc.
 #### What are the pros and cons of immutability?
 #### How can you achieve immutability in your own code?
 
-*Not answered yet*
+Mutable objects are those whose state is allowed to change over time. An immutable value is the exact opposite — after it has been created, it can never change. Strings and Numbers are inherently immutable in javascript.
+
+https://www.sitepoint.com/immutability-javascript/
 
 #### Explain the difference between synchronous and asynchronous functions.
 
