@@ -304,7 +304,7 @@ cons - currently require external library or polyfill to achieve this.
 
 #### What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
-*Not answered yet*
+CoffeeScript. Pros/Cons: Syntactic sugar, readable code, and use of good patterns vs debugging and compilation issues.
 
 #### What tools and techniques do you use debugging JavaScript code?
 
