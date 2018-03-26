@@ -2,7 +2,7 @@
 
 #### What is the difference between classes and ID's in CSS?
 
-*Not answered yet*
+Id is unique and you can use only one with that name on your page. Class you can assign to different elements and have two and more elements with same class on your page; id is also more specific when you style elements because of it's priority. So if you use same styles (font-size, for example) to the same element with id (20px) and class (10px) the font-size of id will be used.
 
 #### What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
