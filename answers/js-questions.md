@@ -173,6 +173,10 @@ https://medium.com/@morgan_ashley/front-end-developer-interview-question-03-4b8c
 
 #### Explain how JSONP works (and how it's not really AJAX).
 
+
+JSONP is a method for sending JSON data without worrying about cross-domain issues.
+
+
 A JSONP response contains a callback function usually written in JavaScript,
 and when the response is flushed, the callback will be launched. It's more like
 script tag injection, rather than AJAX.
