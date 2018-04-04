@@ -246,6 +246,9 @@ console.log('three');
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
 
+#### React Questions:
+* Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
+
 ## License
 
 [MIT](LICENSE.md)
