@@ -249,6 +249,7 @@ console.log('three');
 
 #### React Questions:
 * Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
+* Virtual DOM vs. Shadow DOM, are they the same thing?
 
 ## License
 
