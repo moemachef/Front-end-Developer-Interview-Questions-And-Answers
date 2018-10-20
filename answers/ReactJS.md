@@ -19,3 +19,14 @@ Given the same environment, for example development, project author creates two 
 First webpack build configuration is needed for so-called DLLs, which are kind of close to the commons code seen before, but not exactly. To my understanding, DLLs mostly tend to group 3rd party code (vendor and polyfills) and not your own shared utility code, but again this is more an impression and not a strict rule. Anyway, here project author should group code that changes much less frequently during a normal development session. The idea, in dev environment, is to run this build every once in a while, for example when a dependency changes. And usually it is up to the developer to fire this build when s/he think is needed.
 
 The other webpack build configuration is needed for project own code, or anyway code that changes regularly while doing dev work. This is the actual build that developer will run again and again, or will run in watch mode, and at this point it should be very much quicker as compared to the single build seen in CommonsChunk scenario.
+
+
+#### Virtual DOM vs. Shadow DOM, are they the same thing?
+
+Maybe you’ve heard of the “Shadow DOM” and you’re wondering, is the Shadow DOM
+the same thing as the Virtual DOM? The answer is no.
+The Virtual DOM is a tree of JavaScript objects that represent the real DOM elements.
+The Shadow DOM is a form of encapsulation on our elements. Think about using the
+<video> tag in your browser. In a video tag, your browser will create a set of video controls
+such as a play button, a timecode number, a scrubber progress bar etc. These elements aren’t
+part of your “regular DOM”, but instead, part of the “Shadow DOM”.
