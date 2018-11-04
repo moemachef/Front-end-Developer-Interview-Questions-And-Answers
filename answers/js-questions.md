@@ -353,3 +353,6 @@ The answer is never or almost never or if all options are exhausted.
 
 #### What is Recursion ?
 Recursion in JavaScript is, simply put, the ability to call a function from within itself.
+
+#### What's the difference between undeclared and undefined ?
+Undeclared never been declared in any scope, undefined defined but never have a value.
