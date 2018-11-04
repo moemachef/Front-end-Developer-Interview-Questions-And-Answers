@@ -154,6 +154,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Explain the difference between synchronous and asynchronous functions.
 * What is event loop?
   * What is the difference between call stack and task queue?
+* What is the difference between undeclared and undefined ?
 
 #### Testing Questions:
 
