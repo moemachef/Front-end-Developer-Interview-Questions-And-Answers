@@ -158,6 +158,10 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * When should you use classical inheritance?
 * What is Recursion ?
 * What is the difference between undeclared and undefined ?
+* What is a constructor call ?
+* What is [[Prototype]] and where does it come from ?
+* How does [[Prototype]] affect the behaviour of an object ?
+* How do we find out where an object's [[Prototype]] points to (3 ways) ?
 
 #### Testing Questions:
 
