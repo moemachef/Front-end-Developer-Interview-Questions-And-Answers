@@ -356,3 +356,18 @@ Recursion in JavaScript is, simply put, the ability to call a function from with
 
 #### What's the difference between undeclared and undefined ?
 Undeclared never been declared in any scope, undefined defined but never have a value.
+
+
+#### What is a constructor call ?
+It's a function called with the "new" keyword.
+
+#### What is [[Prototype]] and where does it come from ?
+It's a linkage from one object to an other, it's created at the time the object is created.
+
+#### How does [[Prototype]] affect the behaviour of an object ?
+It delegate up to the chain.
+
+#### How do we find out where an object's [[Prototype]] points to (3 ways) ?
+Dunder proto (__proto__)
+Object.getPrototypeOf()
+.constructor.prototype
