@@ -368,4 +368,4 @@ It's a linkage from one object to an other, it's created at the time the object 
 It delegate up to the chain.
 
 #### How do we find out where an object's [[Prototype]] points to (3 ways) ?
-Dunder proto (__proto__) , Object.getPrototypeOf() & .constructor.prototype
+Dunder proto ```(__proto__)``` , ```Object.getPrototypeOf()``` & ```.constructor.prototype```
