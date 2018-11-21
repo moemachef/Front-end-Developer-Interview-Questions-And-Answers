@@ -163,6 +163,8 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * How does [[Prototype]] affect the behaviour of an object ?
 * How do we find out where an object's [[Prototype]] points to (3 ways) ?
 * How is JavaScript's [[Prototype]] chain not like traditional/classical inheritance ?
+* What does [[Prototype]] "delegation" mean and how does it describe object linking in JS ?
+* What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
 
 #### Testing Questions:
 
