@@ -372,3 +372,9 @@ Dunder proto ```(__proto__)``` , ```Object.getPrototypeOf()``` & ```.constructor
 
 #### How is JavaScript's [[Prototype]] chain not like traditional/classical inheritance ?
 Insted of copying things down we have live links up the prototype chain.
+
+#### What does [[Prototype]] "delegation" mean and how does it describe object linking in JS ?
+The prototype chain is delegation link from one object to an other that allow those objects to share context at call time.
+
+#### What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
+Benefit is independent testability and tradeoffs is that it's more complex.
