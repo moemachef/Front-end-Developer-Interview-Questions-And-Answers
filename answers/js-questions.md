@@ -369,3 +369,6 @@ It delegate up to the chain.
 
 #### How do we find out where an object's [[Prototype]] points to (3 ways) ?
 Dunder proto ```(__proto__)``` , ```Object.getPrototypeOf()``` & ```.constructor.prototype```
+
+#### How is JavaScript's [[Prototype]] chain not like traditional/classical inheritance ?
+Insted of copying things down we have live links up the prototype chain.
