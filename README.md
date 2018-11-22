@@ -69,6 +69,7 @@ If interested in getting involved, it would be the right place.
 #### CSS Questions:
 
 * What is reflow?What causes reflow?How could you reduce reflow?
+* What is Repaints?
 * What is the difference between classes and ID's in CSS?
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
