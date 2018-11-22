@@ -9,6 +9,7 @@ Causes are:
 - CSS3 animations and transitions
 - Using offsetWidth and offsetHeight
 - User actions
+
 We can reduce it by:
 - Use Best-Practice Layout Techniques
 - Minimize the Number of CSS Rules
