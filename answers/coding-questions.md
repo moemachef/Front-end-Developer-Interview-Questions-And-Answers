@@ -33,7 +33,7 @@ add(2)(5); // 7
 
 *Answer:* A general solution for any number of parameters
 ```js
-function sum(x, y) {
+function add(x, y) {
   if (y !== undefined) {
     return x + y;
   } else {
