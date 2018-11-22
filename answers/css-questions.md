@@ -1,5 +1,30 @@
 # CSS Questions
 
+#### What is reflow?What causes reflow?How could you reduce reflow?
+The re-calculation of positions and dimensions of all elements, which leads to re-rendering part or all of the document. Changing a single element can affect all children, ancestors, and siblings.
+
+Causes are: 
+- Adding, removing or changing visible DOM elements
+- Adding, removing or changing CSS styles
+- CSS3 animations and transitions
+- Using offsetWidth and offsetHeight
+- User actions
+We can reduce it by:
+- Use Best-Practice Layout Techniques
+- Minimize the Number of CSS Rules
+- Minimize DOM depths
+- Update Classes Low in the DOM Tree
+- Remove Complex Animations From the Flow
+- Modify Hidden Elements
+- Update Elements in Batch
+- Limit the Affected Elements
+- Recognize that Smoothness Compromises Performance
+- Analyze Repaint Issues with Browser Tools
+
+https://www.sitepoint.com/10-ways-minimize-reflows-improve-performance/
+
+
+
 #### What is the difference between classes and ID's in CSS?
 
 Id is unique and you can use only one with that name on your page. Class you can assign to different elements and have two and more elements with same class on your page; id is also more specific when you style elements because of it's priority. So if you use same styles (font-size, for example) to the same element with id (20px) and class (10px) the font-size of id will be used.
