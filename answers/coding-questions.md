@@ -83,6 +83,32 @@ function sum() {
 
 *Answer:* It's actually a reverse method for a string - `'goh angasal a m\'i'`
 
+#### *Question: The syntax is just fine—the problem is some unexpected behavior, What is it ?*
+```
+<button id="btn-0">Button 1!</button>
+<button id="btn-1">Button 2!</button>
+<button id="btn-2">Button 3!</button>
+<script type="text/javascript">
+  var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+   for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
+      // for each of our buttons, when the user clicks it...
+      document.getElementById('btn-' + btnNum).onclick = function() {
+        // tell her what she's won!
+        alert(prizes[btnNum]);
+      };
+    }
+</script>
+
+```
+*Answer:*
+
+var does not have block scope. Therefore, it can lead to unpredictable behavior if you’re not careful (due to hoisting).
+ES6 gave us 2 new ways to define variables, each of which has block scope. The key here is block scope.
+We better use let to define the variable i. The expected behavior is that you are declaring the i variable to act as an index or loop counter within the for loop only. Therefore, you’d want that variable to only work within that for code block, meaning within the for curly braces.
+It makes our code more readable and predictable. We are declaring that this variable has this specific scope, i.e. where we defined it.
+
+
+
 #### *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
