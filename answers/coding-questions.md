@@ -102,12 +102,11 @@ function sum() {
 ```
 *Answer:*
 
-var does not have block scope. Therefore, it can lead to unpredictable behavior if you’re not careful (due to hoisting).
-ES6 gave us 2 new ways to define variables, each of which has block scope. The key here is block scope.
-We better use let to define the variable i. The expected behavior is that you are declaring the i variable to act as an index or loop counter within the for loop only. Therefore, you’d want that variable to only work within that for code block, meaning within the for curly braces.
-It makes our code more readable and predictable. We are declaring that this variable has this specific scope, i.e. where we defined it.
+- We can fix it  by using closures with an immediately invoked function expression (IIFE), which creates a closure around our code, capturing the value of i in the IIFE's argument to keep it from changing when the callback is executed.
 
+- We could also have solved the problem using Function#bind to capture the value of i in a new function with that value applied as the first argument.
 
+- We could also use let insted of var, With the introduction of let and block scoping in ES6, the previously mentioned problem disappears - so long as you declare your for loop initializers using let instead of var. Using let in our loop initializer makes i block scoped to the block of code within the loop. This properly captures the value for our callbacks and keeps us from polluting the global scope with for loop initializers all over the place. Not to mention, it keeps the code more readable and concise - nested IIFE's inside for loops don't really add to code clarity or understanding and can be verbose to type.
 
 #### *Question: What is the value of `window.foo`?*
 ```javascript
