@@ -25,6 +25,8 @@ We can reduce it by:
 https://www.sitepoint.com/10-ways-minimize-reflows-improve-performance/
 
 
+#### What is Repaints?
+A repaint occurs when changes are made to elements that affect visibility but not the layout. For example, opacity, background-color, visibility, and outline. Repaints are expensive because the browser must check the visibility of all other nodes in the DOM — one or more may have become visible beneath the changed element.
 
 #### What is the difference between classes and ID's in CSS?
 
