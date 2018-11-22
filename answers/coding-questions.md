@@ -108,6 +108,8 @@ function sum() {
 
 - We could also use let insted of var, With the introduction of let and block scoping in ES6, the previously mentioned problem disappears - so long as you declare your for loop initializers using let instead of var. Using let in our loop initializer makes i block scoped to the block of code within the loop. This properly captures the value for our callbacks and keeps us from polluting the global scope with for loop initializers all over the place. Not to mention, it keeps the code more readable and concise - nested IIFE's inside for loops don't really add to code clarity or understanding and can be verbose to type.
 
+https://www.datchley.name/loop-variable-gotcha/
+
 #### *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
