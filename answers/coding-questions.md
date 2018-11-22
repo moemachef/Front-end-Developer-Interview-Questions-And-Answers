@@ -13,6 +13,18 @@ var foo = 20 + 10 + '30';
 ```
 *Answer:* `'3030'`, because of type coercion from Number to String
 
+#### *Question: If we execute this Javascript, what will the browser's console show??*
+```
+var text = 'outside';
+function logIt(){
+console.log(text);
+var text = 'inside';
+};
+logIt();
+```
+*Answer:* `undefined`, because we didn't pass the text argument to the function after it has been declared outside the function and we console log the text before it was declared inside the function
+
+
 #### *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
