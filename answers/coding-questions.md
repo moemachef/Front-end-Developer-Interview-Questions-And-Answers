@@ -33,26 +33,16 @@ add(2)(5); // 7
 
 *Answer:* A general solution for any number of parameters
 ```js
-'use strict';
-
-let sum = (arr) => arr.reduce((a, b) => a + b);
-let addGenerator = (numArgs, prevArgs) => {
-  return function () {
-    let totalArgs = prevArgs.concat(Array.from(arguments));
-    if (totalArgs.length === numArgs) {
-      return sum(totalArgs);
-    }
-    return addGenerator(numArgs, totalArgs);
-  };
-};
-
-let add = addGenerator(2, []);
+function sum(x, y) {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(y) { return x + y; };
+  }
+}
 
 add(2, 5); // 7
 add(2)(5); // 7
-add()(2, 5); // 7
-add()(2)(5); // 7
-add()()(2)(5); // 7
 ```
 #### *Question: Write a sum() function that accepts any number of arguments and returns their sum.*
 ```javascript
