@@ -56,7 +56,13 @@ add()()(2)(5); // 7
 ```
 #### *Question: Write a sum() function that accepts any number of arguments and returns their sum.*
 ```javascript
-
+function sum() {
+    var s = 0;
+    for (var i=0; i < arguments.length; i++) {
+        s += arguments[i];
+    }
+    return s;
+}
 ```
 #### *Question: What value is returned from the following statement?*
 ```javascript
