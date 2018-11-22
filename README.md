@@ -220,6 +220,11 @@ logIt();
 add(2, 5); // 7
 add(2)(5); // 7
 ```
+*Question: How would you make this work?*
+```javascript
+sum(3, 5, 7); // 15
+sum(3)(5)(7); // 15
+```
 
 *Question: Write a sum() function that accepts any number of arguments and returns their sum.*
 
