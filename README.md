@@ -236,6 +236,23 @@ sum(3)(5)(7); // 15
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
+*Question: The syntax is just fine—the problem is some unexpected behavior, What is it ?*
+```
+<button id="btn-0">Button 1!</button>
+<button id="btn-1">Button 2!</button>
+<button id="btn-2">Button 3!</button>
+<script type="text/javascript">
+  var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+   for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
+      // for each of our buttons, when the user clicks it...
+      document.getElementById('btn-' + btnNum).onclick = function() {
+        // tell her what she's won!
+        alert(prizes[btnNum]);
+      };
+    }
+</script>
+
+```
 *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
