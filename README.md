@@ -200,7 +200,10 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```javascript
 var foo = 10 + '20';
 ```
-
+*Question: What is the value of `foo`?*
+```javascript
+var foo = 20 + 10 + '30';
+```
 *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
