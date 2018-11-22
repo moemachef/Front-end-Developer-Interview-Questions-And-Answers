@@ -44,6 +44,28 @@ function add(x, y) {
 add(2, 5); // 7
 add(2)(5); // 7
 ```
+
+#### *Question: How would you make this work?*
+```javascript
+sum(3, 5, 7); // 15
+sum(3)(5)(7); // 15
+```
+*Answer:* A general solution for any number of parameters
+```js
+function sum(x, y, z) {
+  if (y !== undefined && z !== undefined) {
+    return (x + y + z);
+  } else {
+    return function(y) { 
+      return function(z){
+        return (x + y + z)
+      }
+    };
+  }
+}
+```
+
+
 #### *Question: Write a sum() function that accepts any number of arguments and returns their sum.*
 ```javascript
 function sum() {
