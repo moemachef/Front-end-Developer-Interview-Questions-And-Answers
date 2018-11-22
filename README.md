@@ -221,6 +221,9 @@ add(2, 5); // 7
 add(2)(5); // 7
 ```
 
+*Question: Write a sum() function that accepts any number of arguments and returns their sum.*
+
+
 *Question: What value is returned from the following statement?*
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
