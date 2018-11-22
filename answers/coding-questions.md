@@ -7,6 +7,12 @@ var foo = 10 + '20';
 
 *Answer:* `'1020'`, because of type coercion from Number to String
 
+#### *Question: What is the value of `foo`?*
+```javascript
+var foo = 20 + 10 + '30';
+```
+*Answer:* `'3030'`, because of type coercion from Number to String
+
 #### *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
