@@ -34,7 +34,7 @@ clear: both
 
 overflow: hidden,
 
-empty <div> after floated element</div>
+empty div after floated element
 
 
 #### What is the difference between classes and ID's in CSS?
