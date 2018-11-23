@@ -28,6 +28,13 @@ https://www.sitepoint.com/10-ways-minimize-reflows-improve-performance/
 #### What is Repaints?
 A repaint occurs when changes are made to elements that affect visibility but not the layout. For example, opacity, background-color, visibility, and outline. Repaints are expensive because the browser must check the visibility of all other nodes in the DOM — one or more may have become visible beneath the changed element.
 
+#### How do you clear float?
+```css
+clear: both,
+overflow: hidden,
+empty <div> after floated element</div>
+```
+
 #### What is the difference between classes and ID's in CSS?
 
 Id is unique and you can use only one with that name on your page. Class you can assign to different elements and have two and more elements with same class on your page; id is also more specific when you style elements because of it's priority. So if you use same styles (font-size, for example) to the same element with id (20px) and class (10px) the font-size of id will be used.
