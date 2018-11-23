@@ -32,7 +32,7 @@ A repaint occurs when changes are made to elements that affect visibility but no
 
 clear: both
 
-overflow: hidden,
+overflow: hidden
 
 empty div after floated element
 
