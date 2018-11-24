@@ -26,6 +26,7 @@ It describes the performance of an algorithm. (How much more processing power/ti
 - Two nested for loops iterating over the same collection ```O(n^2)```
 - Two nested loops iterating over different collections ```O(n*m)```
 - Sorting ```O(n*log(n))```
+- Searching a sorted array ```O(log(n))```
 
 #### What is Big 'O' Notation ?
 
