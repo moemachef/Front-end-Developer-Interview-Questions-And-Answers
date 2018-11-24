@@ -315,6 +315,7 @@ console.log('three');
 * What is Runtime Complexity ?
 * How can you identify runtime complexity?
 * What is Big 'O' Notation ?
+* What is Space Complexity ?
 
 ## License
 
