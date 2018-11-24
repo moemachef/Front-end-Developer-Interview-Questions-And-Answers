@@ -107,7 +107,7 @@ If interested in getting involved, it would be the right place.
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
 #### JS Questions:
-
+* Explain why the treatment of non-dense arrays important or not important in utility libraries.
 * Explain event delegation
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
