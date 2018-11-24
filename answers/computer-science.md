@@ -35,3 +35,7 @@ It's a way of writing out runtime complexity
 - ```O(n)``` Linear
 - ```O(1)``` Constant
 - ```O(n^2)``` Quadratic
+
+#### What is Space Complexity ?
+
+It's how much more memory is required by doubling the problem set
