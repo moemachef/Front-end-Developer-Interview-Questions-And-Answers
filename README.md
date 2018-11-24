@@ -312,7 +312,7 @@ console.log('three');
 
 #### Computer Science Questions:
 
-* What is Binary tree ?
+* What is Runtime Complexity ?
 
 ## License
 
