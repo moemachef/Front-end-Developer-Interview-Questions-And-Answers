@@ -313,6 +313,7 @@ console.log('three');
 #### Computer Science Questions:
 
 * What is Runtime Complexity ?
+* How can you identify runtime complexity?
 * What is Big 'O' Notation ?
 
 ## License
