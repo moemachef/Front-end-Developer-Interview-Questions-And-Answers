@@ -308,11 +308,7 @@ console.log('three');
 * Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
 * Virtual DOM vs. Shadow DOM, are they the same thing?
 * What is the diffrence between Controlled Component & Uncontrolled Component ?
-* Show me the three ways in of HTML is represented when using JSX.
-  Assume the HTML output is coming from an uncontrolled React component.
-  Basically, first (1) show me how it looks if you are to write the JSX code. Then (2) show me
-  how it will look if you are to write it without JSX. Finally, show me, roughly, (3) how it is
-  represented at runtime.
+
 
 #### Computer Science Questions:
 
