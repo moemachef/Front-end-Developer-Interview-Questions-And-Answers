@@ -378,3 +378,6 @@ The prototype chain is delegation link from one object to an other that allow th
 
 #### What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
 Benefit is independent testability and tradeoffs is that it's more complex.
+
+#### What is Coercion ?
+It's the dynamic languages way of expressing how values convert from one type to another.
