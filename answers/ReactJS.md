@@ -32,3 +32,11 @@ The Shadow DOM is a form of encapsulation on our elements. Think about using the
 <video> tag in your browser. In a video tag, your browser will create a set of video controls
 such as a play button, a timecode number, a scrubber progress bar etc. These elements aren’t
 part of your “regular DOM”, but instead, part of the “Shadow DOM”.
+  
+  
+  #### What is the diffrence between Controlled Component & Uncontrolled Component ?
+  
+A Controlled Component is one that takes its current value through props and notifies changes through callbacks like onChange. A parent component "controls" it by handling the callback and managing its own state and passing the new values as props to the controlled component. You could also call this a "dumb component".
+
+
+A Uncontrolled Component is one that stores its own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
