@@ -24,6 +24,7 @@ If interested in getting involved, it would be the right place.
   1. **[Coding Questions](#coding-questions)** - *[Answers](answers/coding-questions.md)*
   1. **[Fun Questions](#fun-questions)** - *[Answers](answers/fun-questions.md)*
   1. **[React Questions](#react-questions)** - *[Answers](answers/ReactJS.md)*
+  1. **[Computer Science Questions](#computer-science-questions)** - *[Answers](answers/computer-science.md)*
   
 
 #### General Questions:
@@ -305,6 +306,10 @@ console.log('three');
 
 * Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
 * Virtual DOM vs. Shadow DOM, are they the same thing?
+
+#### Computer Science Questions:
+
+* What is Binary tree ?
 
 ## License
 
