@@ -412,3 +412,12 @@ Benefit is independent testability and tradeoffs is that it's more complex.
 
 #### What is Coercion ?
 It's the dynamic languages way of expressing how values convert from one type to another.
+
+#### What are the Falsy values in JavaScript ?
+
+- " "
+- 0, +0, -0
+- null
+- NaN
+- false
+- undefined
