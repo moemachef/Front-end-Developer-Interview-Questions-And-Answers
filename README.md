@@ -168,6 +168,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * How is JavaScript's [[Prototype]] chain not like traditional/classical inheritance ?
 * What does [[Prototype]] "delegation" mean and how does it describe object linking in JS ?
 * What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
+* What is Coercion ?
 
 #### Testing Questions:
 
