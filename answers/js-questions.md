@@ -1,5 +1,11 @@
 # JS Questions
 
+#### Explain why the treatment of non-dense arrays important or not important in utility libraries.
+
+In practice, creating a dense array will make your code difficult to understand for others. It is thus better to use utility functions such as _.range (Underscore.range)
+http://2ality.com/2012/06/dense-arrays.html
+
+
 #### Explain event delegation
 
 When an event is fired from an element, the event will be bubbled up to its
