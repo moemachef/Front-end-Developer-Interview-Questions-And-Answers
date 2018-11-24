@@ -28,6 +28,8 @@ Deploying ES5 Pros:
 Deploying ES5 Cons:
 - Not using the latest features of the language.
 
+https://medium.freecodecamp.org/you-might-not-need-to-transpile-your-javascript-4d5e0a438ca
+
 
 #### Explain event delegation
 
