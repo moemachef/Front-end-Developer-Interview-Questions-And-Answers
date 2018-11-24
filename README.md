@@ -108,7 +108,7 @@ If interested in getting involved, it would be the right place.
 
 #### JS Questions:
 * Explain why the treatment of non-dense arrays important or not important in utility libraries.
-* Explain the performance impact of deploying ES6 code, compiled to ES5, in all browsers.Explain some gotchas of deploying       ES5. Also explain some gotchas of deploying ES6.
+* Explain the performance impact of deploying ES6 code, compiled to ES5, in all browsers. Explain some gotchas of deploying     ES5. Also explain some gotchas of deploying ES6.
 * Explain event delegation
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
