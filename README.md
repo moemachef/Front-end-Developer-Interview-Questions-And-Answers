@@ -171,6 +171,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What does [[Prototype]] "delegation" mean and how does it describe object linking in JS ?
 * What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
 * What is Coercion ?
+* What are the Falsy values in JavaScript ?
 
 #### Testing Questions:
 
