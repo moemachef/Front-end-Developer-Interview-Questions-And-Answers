@@ -6,6 +6,28 @@ In practice, creating a dense array will make your code difficult to understand 
 
 http://2ality.com/2012/06/dense-arrays.html
 
+#### Explain the performance impact of deploying ES6 code, compiled to ES5, in all browsers. Explain some gotchas of deploying ES5. Also explain some gotchas of deploying ES6.
+
+Performance impact of deploying ES6 code, compiled to ES5 is that you’re making your code unnecessarily big and slow to support a minority of the users who will probably upgrade their system by the time you manage to configure your Webpack and Babel! 
+
+Deploying ES6 compiled to ES5 Pros:
+- You’re using React JSX.
+- You want to try the latest features of the language.
+- You’re using TypeScript.
+- You wanna reduce code size using tree shaking.
+
+Deploying ES6 compiled to ES5 Cons:
+- you’re making your code unnecessarily big and slow to support a minority of the users who will probably upgrade their system by the time you manage to configure your Webpack and Babel!
+
+Deploying ES5 Pros:
+- ES5 code is smaller. 
+- ES5 is almost always faster than ES6, transpiled or otherwise.
+- Some features need a polyfill.
+- Depending on the size of your codebase and your build process, transpilation may be slow.
+
+Deploying ES5 Cons:
+- Not using the latest features of the language.
+
 
 #### Explain event delegation
 
