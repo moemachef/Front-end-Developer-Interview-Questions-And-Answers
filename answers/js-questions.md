@@ -17,7 +17,7 @@ Deploying ES6 compiled to ES5 Pros:
 - You wanna reduce code size using tree shaking.
 
 Deploying ES6 compiled to ES5 Cons:
-- you’re making your code unnecessarily big and slow to support a minority of the users who will probably upgrade their system by the time you manage to configure your Webpack and Babel!
+- You’re making your code unnecessarily big and slow to support a minority of the users who will probably upgrade their system by the time you manage to configure your Webpack and Babel!
 
 Deploying ES5 Pros:
 - ES5 code is smaller. 
