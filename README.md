@@ -23,7 +23,7 @@ If interested in getting involved, it would be the right place.
   1. **[Network Questions](#network-questions)** - *[Answers](answers/network-questions.md)*
   1. **[Coding Questions](#coding-questions)** - *[Answers](answers/coding-questions.md)*
   1. **[Fun Questions](#fun-questions)** - *[Answers](answers/fun-questions.md)*
-  1. **[React](#react-questions)** - *[Answers](answers/ReactJS.md)*
+  1. **[React-React Native-Redux-Webpack](#react-questions)** - *[Answers](answers/ReactJS.md)*
   
 
 #### General Questions:
@@ -301,7 +301,7 @@ console.log('three');
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
 
-#### React Questions:
+#### React-React Native-Redux-Webpack Questions:
 * Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
 * Virtual DOM vs. Shadow DOM, are they the same thing?
 
