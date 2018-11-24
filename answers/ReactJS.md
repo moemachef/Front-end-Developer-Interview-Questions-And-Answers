@@ -40,3 +40,44 @@ A Controlled Component is one that takes its current value through props and not
 
 
 A Uncontrolled Component is one that stores its own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+
+  #### Show me the three ways in of HTML is represented when using JSX. Assume the HTML output is coming from an uncontrolled        React component. Basically, first (1) show me how it looks if you are to write the JSX code. Then (2) show me how it          will look if you are to write it without JSX. Finally, show me, roughly, (3) how it is represented at runtime.
+  
+  
+  JSX
+  
+  ```
+  const el = (props) => (
+  <div onClick={props.onClick}>
+    <Icon src={props.icon} /><span>{props.text}</span>
+  </div>
+)
+  ```
+  
+  Without JSX / After compiling JSX by Babel
+  
+  ```
+  const el = (props) => (
+  React.createElement(
+    "div",
+    { onClick: props.onClick },
+    React.createElement(Icon, { src: props.icon }),
+    React.createElement(
+      "span",
+      null,
+      props.text
+    )
+  )
+)
+  ```
+  
+  At runtime 
+  
+  ```
+  @@ -0,0 +1,5 @@
++┊ ┊1┊const types = {
++┊ ┊2┊  element: 'element',
++┊ ┊3┊  value: 'value',
++┊ ┊4┊  props: 'props',
++┊ ┊5┊}🚫↵
+  ```
