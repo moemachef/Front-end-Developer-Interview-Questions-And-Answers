@@ -423,4 +423,4 @@ It's the dynamic languages way of expressing how values convert from one type to
 - undefined
 
 #### What is the diffrence between == & ===, and what about the performance ?
-== allows coercion and === disallows coercion, unlike the common misconception that == checks value & === checks value and type. == makes more work due to it allows coercion and thus == might be a little slower when the types are different. 
+== allows coercion and === disallows coercion, unlike the common misconception that == checks value & === checks value and type. == makes more work due to it allows coercion and thus == might be a little slower when the types are different (=== 30% faster). 
