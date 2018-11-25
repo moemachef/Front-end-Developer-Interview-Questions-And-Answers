@@ -424,3 +424,6 @@ It's the dynamic languages way of expressing how values convert from one type to
 
 #### What is the diffrence between == & ===, and what about the performance ?
 == allows coercion and === disallows coercion, unlike the common misconception that == checks value & === checks value and type. == makes more work due to it allows coercion and thus == might be a little slower when the types are different (=== 30% faster). 
+
+- If the types compared are the same, they are identical. That is to say they use the exact same algorithm.
+- If the types are different, then performance is irrelevant. Either you need type coercion, or you don't. If you need it, don't use == because the result you get may be unexpected.
