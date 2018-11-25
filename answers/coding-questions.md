@@ -103,6 +103,7 @@ function sum() {
 
 ```
 *Answer:*
+-  The for loop when completed the variable i has a value of 3 each time the loop try to start.
 
 - We can fix it  by using closures with an immediately invoked function expression (IIFE), which creates a closure around our code, capturing the value of i in the IIFE's argument to keep it from changing when the callback is executed.
 
