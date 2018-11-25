@@ -172,7 +172,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What are the benefits of the "behavior delegation" design pattern ? What are the tradeoffs of using [[Prototype]]?
 * What is Coercion ?
 * What are the Falsy values in JavaScript ?
-* What is the diffrence between == & === ?
+* What is the diffrence between == & ===, and what about the performance ?
 
 #### Testing Questions:
 
