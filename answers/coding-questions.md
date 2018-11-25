@@ -122,6 +122,8 @@ https://www.datchley.name/loop-variable-gotcha/
 
 *Answer:* Always `'bar'`
 
+The or (||) operator. In an expression of the form X||Y, X is first evaluated and interpreted as a boolean value. If this boolean value is true, then true is returned and Y is not evaluated, since the “or” condition has already been satisfied. If this boolean value is “false”, though, we still don’t know if X||Y is true or false until we evaluate Y, and interpret it as a boolean value as well.
+
 #### *Question: What is the outcome of the two alerts below?*
 ```javascript
 var foo = "Hello";
