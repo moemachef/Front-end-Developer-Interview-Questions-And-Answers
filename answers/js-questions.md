@@ -421,3 +421,6 @@ It's the dynamic languages way of expressing how values convert from one type to
 - NaN
 - false
 - undefined
+
+#### What is the diffrence between == & === ?
+== allows coercion and === disallows coercion, unlike the common misconception that == checks value & === checks value and type. 
