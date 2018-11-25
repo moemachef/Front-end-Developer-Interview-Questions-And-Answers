@@ -22,7 +22,9 @@ var text = 'inside';
 };
 logIt();
 ```
-*Answer:* `undefined`, because we didn't pass the text argument to the function after it has been declared outside the function and we console log the text before it was declared inside the function
+*Answer:* Neither outside, nor inside, the result is`undefined`, It’s because JavaScript initialization is not hoisted. (Why doesn’t it show the global value of outside? The reason is that when the function is executed, it checks that there’s a local x variable present but doesn’t yet declare it, so it won’t look for global one.)
+
+
 
 
 #### *Question: How would you make this work?*
