@@ -329,6 +329,76 @@ var myObject = {
 myObject.func();
 ```
 
+*Question: What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?*
+
+
+
+*Question: What is the significance, and what are the benefits, of including 'use strict' at the beginning of a JavaScript source file?*
+
+
+*Question: Consider the two functions below. Will they both return the same thing? Why or why not?*
+
+```
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+```
+
+
+
+*Question: What is NaN? What is its type? How can you reliably test if a value is equal to NaN?*
+
+
+*Question: What will the code below output? Explain your answer.*
+
+```
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+```
+
+
+*Question: Discuss possible ways to write a function isInteger(x) that determines if x is an integer.*
+
+
+*Question: In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?*
+
+```
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+```
+
+
+*Question: Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome.*
+
+
+
+*Question: Write a ```sum``` method which will work properly when invoked using either syntax below.*
+
+```
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+
+
+
+
+
 
 #### Fun Questions:
 
