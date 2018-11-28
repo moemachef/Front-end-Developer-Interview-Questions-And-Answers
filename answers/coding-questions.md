@@ -314,11 +314,173 @@ Some of the key benefits of strict mode include:
 - Makes debugging easier. Code errors that would otherwise have been ignored or would have failed silently will now generate errors or throw exceptions, alerting you sooner to problems in your code and directing you more quickly to their source.
 
 - Prevents accidental globals. Without strict mode, assigning a value to an undeclared variable automatically creates a global variable with that name. This is one of the most common errors in JavaScript. In strict mode, attempting to do so throws an error.
-- Eliminates this coercion. Without strict mode, a reference to a this value of null or undefined is automatically coerced to the global. This can cause many headfakes and pull-out-your-hair kind of bugs. In strict mode, referencing a a this value of null or undefined throws an error.
+- Eliminates ```this``` coercion. Without strict mode, a reference to a ```this``` value of null or undefined is automatically coerced to the global. This can cause many headfakes and pull-out-your-hair kind of bugs. In strict mode, referencing a a ```this``` value of null or undefined throws an error.
 
-- Disallows duplicate parameter values. Strict mode throws an error when it detects a duplicate named argument for a function (e.g., function foo(val1, val2, val1){}), thereby catching what is almost certainly a bug in your code that you might otherwise have wasted lots of time tracking down.
-Note: It used to be (in ECMAScript 5) that strict mode would disallow duplicate property names (e.g. var object = {foo: "bar", foo: "baz"};) but as of ECMAScript 2015 this is no longer the case.
+- Disallows duplicate parameter values. Strict mode throws an error when it detects a duplicate named argument for a function (e.g., ```function foo(val1, val2, val1){}```), thereby catching what is almost certainly a bug in your code that you might otherwise have wasted lots of time tracking down.
 
-- Makes eval() safer. There are some differences in the way eval() behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an eval() statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems).
+Note: It used to be (in ECMAScript 5) that strict mode would disallow duplicate property names (e.g. ```var object = {foo: "bar", foo: "baz"};```) but as of ECMAScript 2015 this is no longer the case.
 
-- Throws error on invalid usage of delete. The delete operator (used to remove properties from objects) cannot be used on non-configurable properties of the object. Non-strict code will fail silently when an attempt is made to delete a non-configurable property, whereas strict mode will throw an error in such a case.
+- Makes ```eval()``` safer. There are some differences in the way ```eval()``` behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an ```eval()``` statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems).
+
+- Throws error on invalid usage of ```delete```. The ```delete``` operator (used to remove properties from objects) cannot be used on non-configurable properties of the object. Non-strict code will fail silently when an attempt is made to delete a non-configurable property, whereas strict mode will throw an error in such a case.
+
+
+#### *Question: Consider the two functions below. Will they both return the same thing? Why or why not?*
+
+```
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+```
+
+*Answer:* 
+
+Surprisingly, these two functions will not return the same thing. Rather:
+
+```
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
+```
+will yield:
+
+```
+foo1 returns:
+Object {bar: "hello"}
+foo2 returns:
+undefined 
+```
+
+Not only is this surprising, but what makes this particularly gnarly is that ```foo2()``` returns undefined without any error being thrown.
+
+The reason for this has to do with the fact that semicolons are technically optional in JavaScript (although omitting them is generally really bad form). As a result, when the line containing the ```return``` statement (with nothing else on the line) is encountered in ```foo2()```, a semicolon is automatically inserted immediately after the return statement.
+
+No error is thrown since the remainder of the code is perfectly valid, even though it doesn’t ever get invoked or do anything (it is simply an unused code block that defines a property bar which is equal to the string ```"hello"```).
+
+This behavior also argues for following the convention of placing an opening curly brace at the end of a line in JavaScript, rather than on the beginning of a new line. As shown here, this becomes more than just a stylistic preference in JavaScript.
+
+
+#### *Question: What is NaN? What is its type? How can you reliably test if a value is equal to NaN?*
+
+
+*Answer:* 
+
+The ```NaN``` property represents a value that is “not a number”. This special value results from an operation that could not be performed either because one of the operands was non-numeric (e.g., ```"abc" / 4```), or because the result of the operation is non-numeric.
+
+While this seems straightforward enough, there are a couple of somewhat surprising characteristics of NaN that can result in hair-pulling bugs if one is not aware of them.
+
+For one thing, although ```NaN``` means “not a number”, its type is, believe it or not, ```Number```:
+
+```console.log(typeof NaN === "number");  // logs "true"```
+
+Additionally, ```NaN``` compared to anything – even itself! – is false:
+
+```console.log(NaN === NaN);  // logs "false"```
+
+A semi-reliable way to test whether a number is equal to NaN is with the built-in function ```isNaN()```, but even using ```isNaN()``` is an imperfect solution.
+
+A better solution would either be to use ```value !== value```, which would only produce true if the value is equal to NaN. Also, ES6 offers a new ```Number.isNaN()``` function, which is a different and more reliable than the old global ```isNaN()``` function.
+
+
+#### *Question: What is NaN? What is its type? How can you reliably test if a value is equal to NaN?*
+
+*Answer:* 
+
+The ```NaN``` property represents a value that is “not a number”. This special value results from an operation that could not be performed either because one of the operands was non-numeric (e.g., ```"abc" / 4```), or because the result of the operation is non-numeric.
+
+While this seems straightforward enough, there are a couple of somewhat surprising characteristics of NaN that can result in hair-pulling bugs if one is not aware of them.
+
+For one thing, although ```NaN``` means “not a number”, its type is, believe it or not, ```Number```:
+
+```console.log(typeof NaN === "number");  // logs "true"```
+
+Additionally, ```NaN``` compared to anything – even itself! – is false:
+
+```console.log(NaN === NaN);  // logs "false"```
+
+A semi-reliable way to test whether a number is equal to NaN is with the built-in function ```isNaN()```, but even using ```isNaN()``` is an imperfect solution.
+
+A better solution would either be to use ```value !== value```, which would only produce true if the value is equal to NaN. Also, ES6 offers a new ```Number.isNaN()``` function, which is a different and more reliable than the old global ```isNaN() ``` function.
+
+
+#### *Question: What will the code below output? Explain your answer.*
+
+
+```
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+```
+
+*Answer:* 
+
+An educated answer to this question would simply be: “You can’t be sure. it might print out ```0.3``` and ```true```, or it might not. Numbers in JavaScript are all treated with floating point precision, and as such, may not always yield the expected results.”
+
+The example provided above is classic case that demonstrates this issue. Surprisingly, it will print out:
+
+```
+0.30000000000000004
+false
+```
+A typical solution is to compare the absolute difference between two numbers with the special constant ```Number.EPSILON```:
+
+```
+function areTheNumbersAlmostEqual(num1, num2) {
+	return Math.abs( num1 - num2 ) < Number.EPSILON;
+}
+console.log(areTheNumbersAlmostEqual(0.1 + 0.2, 0.3));
+```
+
+#### *Question: Discuss possible ways to write a function isInteger(x) that determines if x is an integer.*
+
+*Answer:* 
+
+This may sound trivial and, in fact, it is trivial with ECMAscript 6 which introduces a new ```Number.isInteger()``` function for precisely this purpose. However, prior to ECMAScript 6, this is a bit more complicated, since no equivalent of the ```Number.isInteger()``` method is provided.
+
+The issue is that, in the ECMAScript specification, integers only exist conceptually; i.e., numeric values are always stored as floating point values.
+
+With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return false even if a non-numeric value such as a string or null is passed to the function) would be the following use of the bitwise XOR operator:
+
+```function isInteger(x) { return (x ^ 0) === x; } ```
+
+The following solution would also work, although not as elegant as the one above:
+
+```function isInteger(x) { return Math.round(x) === x; }```
+
+Note that ```Math.ceil()``` or ```Math.floor()``` could be used equally well (instead of ```Math.round()```) in the above implementation.
+
+Or alternatively:
+
+```function isInteger(x) { return (typeof x === 'number') && (x % 1 === 0); }```
+
+One fairly common incorrect solution is the following:
+
+```function isInteger(x) { return parseInt(x, 10) === x; }```
+
+While this ```parseInt```-based approach will work well for many values of ```x```, once ```x``` becomes quite large, it will fail to work properly. The problem is that ```parseInt()``` coerces its first parameter to a string before parsing digits. Therefore, once the number becomes sufficiently large, its string representation will be presented in exponential form (e.g., ```1e+21```). Accordingly, ```parseInt()``` will then try to parse ```1e+21```, but will stop parsing when it reaches the ```e ``` character and will therefore return a value of ```1```. 
+Observe:
+
+```
+> String(1000000000000000000000)
+'1e+21'
+```
+
+```
+> parseInt(1000000000000000000000, 10)
+1
+```
+```
+> parseInt(1000000000000000000000, 10) === 1000000000000000000000
+false
+```
