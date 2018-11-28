@@ -427,3 +427,28 @@ It's the dynamic languages way of expressing how values convert from one type to
 
 - If the types compared are the same, they are identical. That is to say they use the exact same algorithm.
 - If the types are different, then performance is irrelevant. Either you need type coercion, or you don't. If you need it, don't use == because the result you get may be unexpected.
+
+#### What is the difference between a pure function & impure function?
+
+A pure function is a function which are sure to provide exact result when the same arguments are passed. For having a function as pure function if must not have any external variable, data store call, ajax request or any other global variables.
+
+This means that you can be completely sure that every time you call the function with the same arguments, you will always get the same result.
+
+Impure function is When function uses any variables not passed in as arguments, the variables used inside functions may cause side effects. Lets say in case of ajax calls it will fail, In such cases the function is called impure function. When a function depends on variables or functions outside of its lexical scope, you can never be sure that the function will behave the same every time it’s called. 
+
+Characteristics of Pure Function:
+
+- The return value of the pure func­tions solely depends on its arguments Hence, if you call the pure functions with the same   set of arguments, you will always get the same return values.
+
+- They do not have any side effects like network or database calls.
+
+- They do not modify the arguments which are passed to them.
+
+Characteristics of Impure functions:
+
+- The return value of the impure functions does not solely depend on its arguments Hence, if you call the impure func­tions     with the same set of arguments, you might get the different return values For example, Math.random(), Date.now()
+
+- They may have any side effects like network or database calls
+
+- They may modify the arguments which are passed to them
+
