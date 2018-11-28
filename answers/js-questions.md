@@ -452,3 +452,6 @@ Characteristics of Impure functions:
 
 - They may modify the arguments which are passed to them.
 
+#### What is composition in functional programming? 
+
+Taking the output of one function and putting it directly in the input of another function, instead of calling one function and then calling another function.
