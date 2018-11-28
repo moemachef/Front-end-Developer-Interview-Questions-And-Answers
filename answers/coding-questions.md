@@ -752,3 +752,295 @@ Example 4: ```+"1" + "1" + "2"``` Outputs: ```"112"``` Explanation: Although the
 Example 5: ```"A" - "B" + "2"``` Outputs: ```"NaN2"``` Explanation: Since the ```-``` operator can not be applied to strings, and since neither ```"A"``` nor ```"B"``` can be converted to numeric values, ```"A" - "B"``` yields ```NaN``` which is then concatenated with the string ```"2"``` to yield “NaN2”.
 
 Example 6: ```"A" - "B" + 2``` Outputs: ```NaN``` Explanation: As exlained in the previous example, ```"A" - "B"``` yields ```NaN```. But any operator applied to NaN with any other numeric operand will still yield ```NaN```.
+
+
+#### *Question: The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?*
+
+```
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        nextListItem();
+    }
+};
+```
+
+*Answer:* 
+
+
+The potential stack overflow can be avoided by modifying the ```nextListItem``` function as follows:
+
+```
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        setTimeout( nextListItem, 0);
+    }
+};
+```
+
+The stack overflow is eliminated because the event loop handles the recursion, not the call stack. When ```nextListItem``` runs, if ```item``` is not null, the timeout function (```nextListItem```) is pushed to the event queue and the function exits, thereby leaving the call stack clear. When the event queue runs its timed-out event, the next ```item``` is processed and a timer is set to again invoke ```nextListItem```. Accordingly, the method is processed from start to finish without a direct recursive call, so the call stack remains clear, regardless of the number of iterations.
+
+
+
+#### *Question: What is a “closure” in JavaScript? Provide an example.*
+
+
+*Answer:* 
+
+A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
+
+Here is an example:
+
+```
+var globalVar = "xyz";
+
+(function outerFunc(outerArg) {
+    var outerVar = 'a';
+    
+    (function innerFunc(innerArg) {
+    var innerVar = 'b';
+    
+    console.log(
+        "outerArg = " + outerArg + "\n" +
+        "innerArg = " + innerArg + "\n" +
+        "outerVar = " + outerVar + "\n" +
+        "innerVar = " + innerVar + "\n" +
+        "globalVar = " + globalVar);
+    
+    })(456);
+})(123);
+```
+
+In the above example, variables from ```innerFunc```, ```outerFunc```, and the global namespace are all in scope in the ```innerFunc```. The above code will therefore produce the following output:
+
+```
+outerArg = 123
+innerArg = 456
+outerVar = a
+innerVar = b
+globalVar = xyz
+```
+
+#### *Question: What will be the output of the following code:*
+
+```
+for (var i = 0; i < 5; i++) {
+	setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+Explain your answer. How could the use of closures help here?
+
+
+*Answer:* 
+
+
+The code sample shown will not display the values 0, 1, 2, 3, and 4 as might be expected; rather, it will display 5, 5, 5, 5, and 5.
+
+The reason for this is that each function executed within the loop will be executed after the entire loop has completed and all will therefore reference the last value stored in ```i```, which was 5.
+
+Closures can be used to prevent this problem by creating a unique scope for each iteration, storing each unique value of the variable within its scope, as follows:
+
+```
+for (var i = 0; i < 5; i++) {
+    (function(x) {
+        setTimeout(function() { console.log(x); }, x * 1000 );
+    })(i);
+}
+```
+
+This will produce the presumably desired result of logging 0, 1, 2, 3, and 4 to the console.
+
+In an ES2015 context, you can simply use ```let``` instead of ```var``` in the original code:
+
+```
+for (let i = 0; i < 5; i++) {
+	setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+
+#### *Question: What would the following lines of code output to the console?*
+
+```
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+```
+
+Explain your answer.
+
+
+*Answer:* 
+
+
+The code will output the following four lines:
+
+```
+0 || 1 = 1
+1 || 2 = 1
+0 && 1 = 0
+1 && 2 = 2
+```
+
+In JavaScript, both ```||``` and ```&&``` are logical operators that return the first fully-determined “logical value” when evaluated from left to right.
+
+The or (```||```) operator. In an expression of the form ```X||Y```, ```X``` is first evaluated and interpreted as a boolean value. If this boolean value is ```true```, then ```true``` (1) is returned and ```Y``` is not evaluated, since the “or” condition has already been satisfied. If this boolean value is “false”, though, we still don’t know if ```X||Y``` is true or false until we evaluate ```Y```, and interpret it as a boolean value as well.
+
+Accordingly, ```0 || 1``` evaluates to true (1), as does ```1 || 2```.
+
+The and (```&&```) operator. In an expression of the form ```X&&Y```, ```X``` is first evaluated and interpreted as a boolean value. If this boolean value is ```false```, then ```false``` (0) is returned and ```Y``` is not evaluated, since the “and” condition has already failed. If this boolean value is “true”, though, we still don’t know if ```X&&Y``` is true or false until we evaluate ```Y```, and interpret it as a boolean value as well.
+
+However, the interesting thing with the ```&&``` operator is that when an expression is evaluated as “true”, then the expression itself is returned. This is fine, since it counts as “true” in logical expressions, but also can be used to return that value when you care to do so. This explains why, somewhat surprisingly, ```1 && 2``` returns 2 (whereas you might it expect it to return ```true``` or ```1```).
+
+
+
+#### *Question: What will be the output when the following code is executed? Explain.*
+
+```
+console.log(false == '0')
+console.log(false === '0')
+```
+
+*Answer:* 
+
+The code will output:
+
+```
+true
+false
+```
+
+In JavaScript, there are two sets of equality operators. The triple-equal operator ```===``` behaves like any traditional equality operator would: evaluates to true if the two expressions on either of its sides have the same type and the same value. The double-equal operator, however, tries to coerce the values before comparing them. It is therefore generally good practice to use the ```===``` rather than ```==```. The same holds true for ```!==``` vs ```!=```.
+
+
+
+
+#### *Question: What is the output out of the following code? Explain your answer.*
+
+```
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+
+
+*Answer:* 
+
+
+The output of this code will be ```456``` (not ```123```).
+
+The reason for this is as follows: When setting an object property, JavaScript will implicitly stringify the parameter value. In this case, since ```b``` and ```c``` are both objects, they will both be converted to ```"[object Object]"```. As a result, ```a[b]``` and ```a[c]``` are both equivalent to ```a["[object Object]"]``` and can be used interchangeably. Therefore, setting or referencing ```a[c]``` is precisely the same as setting or referencing ```a[b]```.
+
+
+
+#### *Question: What will the following code output to the console:*
+
+```
+console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
+```
+
+Explain your answer.
+
+
+*Answer:* 
+
+
+The code will output the value of 10 factorial (i.e., 10!, or 3,628,800).
+
+Here’s why:
+
+The named function ```f()``` calls itself recursively, until it gets down to calling ```f(1)``` which simply returns ```1```. Here, therefore, is what this does:
+
+```
+f(1): returns n, which is 1
+f(2): returns 2 * f(1), which is 2
+f(3): returns 3 * f(2), which is 6
+f(4): returns 4 * f(3), which is 24
+f(5): returns 5 * f(4), which is 120
+f(6): returns 6 * f(5), which is 720
+f(7): returns 7 * f(6), which is 5040
+f(8): returns 8 * f(7), which is 40320
+f(9): returns 9 * f(8), which is 362880
+f(10): returns 10 * f(9), which is 3628800
+```
+
+
+#### *Question: Consider the code snippet below. What will the console output be and why?*
+
+
+```
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
+```
+
+*Answer:* 
+
+
+The output will be ```1```, even though the value of ```x``` is never set in the inner function. Here’s why:
+
+As explained in our JavaScript Hiring Guide, a closure is a function, along with all variables or functions that were in-scope at the time that the closure was created. In JavaScript, a closure is implemented as an “inner function”; i.e., a function defined within the body of another function. An important feature of closures is that an inner function still has access to the outer function’s variables.
+
+Therefore, in this example, since ```x``` is not defined in the inner function, the scope of the outer function is searched for a defined variable ```x```, which is found to have a value of ```1```.
+
+
+#### *Question: What will the following code output to the console and why:*
+
+```
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function (){
+        return this._name;
+    }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+```
+
+What is the issue with this code and how can it be fixed.
+
+
+*Answer:* 
+
+
+The code will output:
+
+```
+undefined
+John Doe
+```
+
+The first ```console.log``` prints ```undefined``` because we are extracting the method from the ```hero``` object, so ```stoleSecretIdentity()``` is being invoked in the global context (i.e., the window object) where the ```_name``` property does not exist.
+
+One way to fix the ```stoleSecretIdentity()``` function is as follows:
+
+```var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);```
+
+
+#### *Question: Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.*
+
+The arguments to the function should be:
+
+a DOM element
+a callback function (that takes a DOM element as its argument)
