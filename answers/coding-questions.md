@@ -484,3 +484,271 @@ Observe:
 > parseInt(1000000000000000000000, 10) === 1000000000000000000000
 false
 ```
+
+
+#### *Question: In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?*
+
+```
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+```
+
+*Answer:* 
+
+The values will be logged in the following order:
+
+```
+1
+4
+3
+2
+```
+
+Let’s first explain the parts of this that are presumably more obvious:
+
+- ```1``` and ```4``` are displayed first since they are logged by simple calls to ```console.log()``` without any delay
+
+- ```2``` is displayed after ```3``` because ```2``` is being logged after a delay of 1000 msecs (i.e., 1 second) whereas ```3``` is being logged after a delay of 0 msecs.
+
+OK, fine. But if ```3``` is being logged after a delay of 0 msecs, doesn’t that mean that it is being logged right away? And, if so, shouldn’t it be logged before ```4```, since ```4``` is being logged by a later line of code?
+
+The answer has to do with properly understanding JavaScript events and timing.
+
+The browser has an event loop which checks the event queue and processes pending events. For example, if an event happens in the background (e.g., a script ```onload``` event) while the browser is busy (e.g., processing an ```onclick```), the event gets appended to the queue. When the onclick handler is complete, the queue is checked and the event is then handled (e.g., the ```onload``` script is executed).
+
+Similarly, ```setTimeout()``` also puts execution of its referenced function into the event queue if the browser is busy.
+
+When a value of zero is passed as the second argument to ```setTimeout()```, it attempts to execute the specified function “as soon as possible”. Specifically, execution of the function is placed on the event queue to occur on the next timer tick. Note, though, that this is not immediate; the function is not executed until the next tick. That’s why in the above example, the call to ```console.log(4)``` occurs before the call to ```console.log(3)``` (since the call to ```console.log(3)``` is invoked via setTimeout, so it is slightly delayed).
+
+
+#### *Question: Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome.*
+
+*Answer:* 
+
+The following one line function will return ```true``` if ```str``` is a palindrome; otherwise, it returns false.
+
+```
+function isPalindrome(str) {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
+}
+```
+
+For example:
+
+```
+console.log(isPalindrome("level"));                   // logs 'true'
+console.log(isPalindrome("levels"));                  // logs 'false'
+console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
+```
+
+
+#### *Question: Write a ```sum``` method which will work properly when invoked using either syntax below.*
+
+```
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+*Answer:* 
+
+There are (at least) two ways to do this:
+
+METHOD 1
+
+```
+function sum(x) {
+  if (arguments.length == 2) {
+    return arguments[0] + arguments[1];
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+```
+
+In JavaScript, functions provide access to an ```arguments``` object which provides access to the actual arguments passed to a function. This enables us to use the ```length``` property to determine at runtime the number of arguments passed to the function.
+
+If two arguments are passed, we simply add them together and return.
+
+Otherwise, we assume it was called in the form ```sum(2)(3)```, so we return an anonymous function that adds together the argument passed to ```sum()``` (in this case 2) and the argument passed to the anonymous function (in this case 3).
+
+METHOD 2
+
+```
+function sum(x, y) {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+```
+
+When a function is invoked, JavaScript does not require the number of arguments to match the number of arguments in the function definition. If the number of arguments passed exceeds the number of arguments in the function definition, the excess arguments will simply be ignored. On the other hand, if the number of arguments passed is less than the number of arguments in the function definition, the missing arguments will have a value of ```undefined``` when referenced within the function. So, in the above example, by simply checking if the 2nd argument is undefined, we can determine which way the function was invoked and proceed accordingly.
+
+
+#### *Question: Consider the following code snippet:*
+
+```
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+(a) What gets logged to the console when the user clicks on “Button 4” and why?
+
+(b) Provide one or more alternate implementations that will work as expected.
+
+
+*Answer:* 
+
+(a) No matter what button the user clicks the number 5 will always be logged to the console. This is because, at the point that the ```onclick``` method is invoked (for any of the buttons), the ```for``` loop has already completed and the variable ```i``` already has a value of 5. (Bonus points for the interviewee if they know enough to talk about how execution contexts, variable objects, activation objects, and the internal “scope” property contribute to the closure behavior.)
+
+(b) The key to making this work is to capture the value of ```i``` at each pass through the ```for``` loop by passing it into a newly created function object. Here are four possible ways to accomplish this:
+
+```
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', (function(i) {
+    return function() { console.log(i); };
+  })(i));
+  document.body.appendChild(btn);
+}
+```
+Alternatively, you could wrap the entire call to ```btn.addEventListener``` in the new anonymous function:
+
+```
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  (function (i) {
+    btn.addEventListener('click', function() { console.log(i); });
+  })(i);
+  document.body.appendChild(btn);
+}
+```
+Or, we could replace the ```for``` loop with a call to the array object’s native forEach method:
+
+```
+['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function() { console.log(i); });
+  document.body.appendChild(btn);
+});
+```
+Lastly, the simplest solution, if you’re in an ES6/ES2015 context, is to use ```let i``` instead of ```var i```:
+
+```
+for (let i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+
+
+#### *Question: Assuming ```d``` is an “empty” object in scope, say:*
+
+```
+var d = {};
+```
+
+…what is accomplished using the following code?
+
+```
+[ 'zebra', 'horse' ].forEach(function(k) {
+	d[k] = undefined;
+});
+```
+
+*Answer:* 
+
+
+The snippet of code shown above sets two properties on the object ```d```. Ideally, any lookup performed on a JavaScript object with an unset key evaluates to ```undefined```. But running this code marks those properties as “own properties” of the object.
+
+This is a useful strategy for ensuring that an object has a given set of properties. Passing this object to ```Object.keys``` will return an array with those set keys as well (even if their values are ```undefined```).
+
+
+
+#### 
+*Question: What will the code below output to the console and why?*
+
+```
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+```
+
+*Answer:* 
+
+The logged output will be:
+
+```
+"array 1: length=5 last=j,o,n,e,s"
+"array 2: length=5 last=j,o,n,e,s"
+```
+```arr1``` and ```arr2``` are the same (i.e. ```['n','h','o','j', ['j','o','n','e','s'] ]```) after the above code is executed for the following reasons:
+
+Calling an array object’s ```reverse()``` method doesn’t only return the array in reverse order, it also reverses the order of the array itself (i.e., in this case, ```arr1```).
+
+The ```reverse()``` method returns a reference to the array itself (i.e., in this case, ```arr1```). As a result, ```arr2``` is simply a reference to (rather than a copy of) ```arr1```. Therefore, when anything is done to ```arr2``` (i.e., when we invoke ```arr2.push(arr3);```), ```arr1``` will be affected as well since ```arr1``` and ```arr2``` are simply references to the same object.
+
+And a couple of side points here that can sometimes trip someone up in answering this question:
+
+Passing an array to the ```push()``` method of another array pushes that entire array as a single element onto the end of the array. As a result, the statement ```arr2.push(arr3);``` adds ```arr3``` in its entirety as a single element to the end of ```arr2``` (i.e., it does not concatenate the two arrays, that’s what the ```concat()``` method is for).
+
+Like Python, JavaScript honors negative subscripts in calls to array methods like ```slice()``` as a way of referencing elements at the end of the array; e.g., a subscript of -1 indicates the last element in the array, and so on.
+
+
+#### *Question: What will the code below output to the console and why ?*
+
+
+```
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+```
+
+*Answer:* 
+
+The above code will output the following to the console:
+
+```
+"122"
+"32"
+"02"
+"112"
+"NaN2"
+NaN
+```
+
+Here’s why…
+
+The fundamental issue here is that JavaScript (ECMAScript) is a loosely typed language and it performs automatic type conversion on values to accommodate the operation being performed. Let’s see how this plays out with each of the above examples.
+
+Example 1: ```1 + "2" + "2"``` Outputs: ```"122"``` Explanation: The first operation to be performed in ```1 + "2"```. Since one of the operands (```"2"```) is a string, JavaScript assumes it needs to perform string concatenation and therefore converts the type of ```1``` to ```"1"```, ```1 + "2"``` yields ```"12"```. Then, ```"12" + "2"``` yields ```"122"```.
+
+Example 2: ```1 + +"2" + "2"``` Outputs: ```"32"``` Explanation: Based on order of operations, the first operation to be performed is ```+"2"``` (the extra ```+``` before the first ```"2"``` is treated as a unary operator). Thus, JavaScript converts the type of ```"2"``` to numeric and then applies the unary ```+``` sign to it (i.e., treats it as a positive number). As a result, the next operation is now ```1 + 2``` which of course yields ```3```. But then, we have an operation between a number and a string (i.e., ```3``` and ```"2"```), so once again JavaScript converts the type of the numeric value to a string and performs string concatenation, yielding ```"32"```.
+
+Example 3: ```1 + -"1" + "2"``` Outputs: ```"02"``` Explanation: The explanation here is identical to the prior example, except the unary operator is ```-``` rather than ```+```. So ```"1"``` becomes ```1```, which then becomes ```-1``` when the ```-``` is applied, which is then added to ```1``` yielding ```0```, which is then converted to a string and concatenated with the final ```"2"``` operand, yielding ```"02"```.
+
+Example 4: ```+"1" + "1" + "2"``` Outputs: ```"112"``` Explanation: Although the first ```"1"``` operand is typecast to a numeric value based on the unary ```+``` operator that precedes it, it is then immediately converted back to a string when it is concatenated with the second ```"1"``` operand, which is then concatenated with the final ```"2"``` operand, yielding the string ```"112"```.
+
+Example 5: ```"A" - "B" + "2"``` Outputs: ```"NaN2"``` Explanation: Since the ```-``` operator can not be applied to strings, and since neither ```"A"``` nor ```"B"``` can be converted to numeric values, ```"A" - "B"``` yields ```NaN``` which is then concatenated with the string ```"2"``` to yield “NaN2”.
+
+Example 6: ```"A" - "B" + 2``` Outputs: ```NaN``` Explanation: As exlained in the previous example, ```"A" - "B"``` yields ```NaN```. But any operator applied to NaN with any other numeric operand will still yield ```NaN```.
