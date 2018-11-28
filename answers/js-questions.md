@@ -446,9 +446,9 @@ Characteristics of Pure Function:
 
 Characteristics of Impure functions:
 
-- The return value of the impure functions does not solely depend on its arguments Hence, if you call the impure func­tions     with the same set of arguments, you might get the different return values For example, Math.random(), Date.now()
+- The return value of the impure functions does not solely depend on its arguments Hence, if you call the impure func­tions     with the same set of arguments, you might get the different return values For example, Math.random(), Date.now().
 
-- They may have any side effects like network or database calls
+- They may have any side effects like network or database calls.
 
-- They may modify the arguments which are passed to them
+- They may modify the arguments which are passed to them.
 
