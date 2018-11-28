@@ -395,9 +395,30 @@ console.log(sum(2)(3));  // Outputs 5
 ```
 
 
+*Question: Consider the following code snippet:*
+
+```
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+(a) What gets logged to the console when the user clicks on “Button 4” and why?
+
+(b) Provide one or more alternate implementations that will work as expected.
 
 
 
+*Question: Assuming ```d``` is an “empty” object in scope, say:*
+```var d = {};```
+…what is accomplished using the following code?
+```
+[ 'zebra', 'horse' ].forEach(function(k) {
+	d[k] = undefined;
+});
+```
 
 
 #### Fun Questions:
