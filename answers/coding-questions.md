@@ -1044,3 +1044,329 @@ The arguments to the function should be:
 
 a DOM element
 a callback function (that takes a DOM element as its argument)
+
+
+
+*Answer:* 
+
+
+Visiting all elements in a tree (DOM) is a classic Depth-First-Search algorithm application. Here’s an example solution:
+
+```
+function Traverse(p_element,p_callback) {
+   p_callback(p_element);
+   var list = p_element.children;
+   for (var i = 0; i < list.length; i++) {
+       Traverse(list[i],p_callback);  // recursive call
+   }
+}
+```
+
+
+#### *Question: Testing your this knowledge in JavaScript: What is the output of the following code?*
+
+```
+var length = 10;
+function fn() {
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+
+obj.method(fn, 1);
+```
+
+
+*Answer:* 
+
+
+Output:
+
+```
+10
+2
+```
+
+Why isn’t it ```10``` and ```5```?
+
+In the first place, as ```fn``` is passed as a parameter to the function ```method```, the scope (```this```) of the function ```fn``` is ```window```. ```var length = 10;``` is declared at the ```window``` level. It also can be accessed as ```window.length``` or ```length``` or ```this.length``` (when ```this === window```.)
+
+```method``` is bound to ```Object obj```, and ```obj.method``` is called with parameters ```fn``` and ```1```. Though ```method``` is accepting only one parameter, while invoking it has passed two parameters; the first is a function callback and other is just a number.
+
+When ```fn()``` is called inside ```method```, which was passed the function as a parameter at the global level, ```this.length``` will have access to ```var length = 10``` (declared globally) not ```length = 5``` as defined in ```Object obj```.
+
+Now, we know that we can access any number of arguments in a JavaScript function using the ```arguments[]``` array.
+
+Hence ```arguments[0]()``` is nothing but calling ```fn()```. Inside ```fn``` now, the scope of this function becomes the ```arguments``` array, and logging the length of ```arguments[]``` will return ```2```.
+
+Hence the output will be as above.
+
+
+
+#### *Question: Consider the following code. What will the output be, and why?*
+
+```
+(function () {
+    try {
+        throw new Error();
+    } catch (x) {
+        var x = 1, y = 2;
+        console.log(x);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+
+
+*Answer:* 
+
+
+```
+1
+undefined
+2
+```
+
+```var``` statements are hoisted (without their value initialization) to the top of the global or function scope it belongs to, even when it’s inside a ```with``` or ```catch``` block. However, the error’s identifier is only visible inside the ```catch``` block. It is equivalent to:
+
+```
+(function () {
+    var x, y; // outer and hoisted
+    try {
+        throw new Error();
+    } catch (x /* inner */) {
+        x = 1; // inner x, not the outer one
+        y = 2; // there is only one y, which is in the outer scope
+        console.log(x /* inner */);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+
+
+#### *Question: What will be the output of this code?*
+
+```
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();
+```
+
+
+*Answer:* 
+
+
+Neither ```21```, nor ```20```, the result is ```undefined```
+
+It’s because JavaScript initialization is not hoisted.
+
+(Why doesn’t it show the global value of 21? The reason is that when the function is executed, it checks that there’s a local ```x``` variable present but doesn’t yet declare it, so it won’t look for global one.)
+
+
+
+#### *Question: How do you clone an object?*
+
+
+*Answer:* 
+
+
+```
+var obj = {a: 1 ,b: 2}
+var objclone = Object.assign({},obj);
+```
+
+Now the value of objclone is ```{a: 1 ,b: 2}``` but points to a different object than ```obj```.
+
+Note the potential pitfall, though: ```Object.clone()``` will just do a shallow copy, not a deep copy. This means that nested objects aren’t copied. They still refer to the same nested objects as the original:
+
+```
+let obj = {
+    a: 1,
+    b: 2,
+    c: {
+        age: 30
+    }
+};
+
+var objclone = Object.assign({},obj);
+console.log('objclone: ', objclone);
+
+obj.c.age = 45;
+console.log('After Change - obj: ', obj);           // 45 - This also changes
+console.log('After Change - objclone: ', objclone); // 45
+```
+
+
+
+#### *Question: What will this code print?*
+
+```
+for (let i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+
+*Answer:* 
+
+
+
+It will print ```0 1 2 3 4```, because we use ```let``` instead of ```var``` here. The variable ```i``` is only seen in the ```for``` loop’s block scope.
+
+
+
+#### *Question: What do the following lines output, and why?*
+
+```
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+```
+
+*Answer:* 
+
+
+The first statement returns ```true``` which is as expected.
+
+The second returns ```false``` because of how the engine works regarding operator associativity for ```<``` and ```>```. It compares left to right, so ```3 > 2 > 1``` JavaScript translates to ```true > 1```. ```true``` has value ```1```, so it then compares ```1 > 1```, which is ```false```.
+
+
+
+#### *Question: How do you add an element at the begining of an array? How do you add one at the end?*
+
+
+*Answer:* 
+
+
+
+```
+var myArray = ['a', 'b', 'c', 'd'];
+myArray.push('end');
+myArray.unshift('start');
+console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
+```
+With ES6, one can use the spread operator:
+
+```
+myArray = ['start', ...myArray];
+myArray = [...myArray, 'end'];
+```
+Or, in short:
+
+```myArray = ['start', ...myArray, 'end'];```
+
+
+#### *Question: Imagine you have this code:?*
+
+
+```
+var a = [1, 2, 3];
+```
+
+a) Will this result in a crash?
+
+
+```
+a[10] = 99;
+```
+
+b) What will this output?
+
+
+```
+console.log(a[6]);
+```
+
+*Answer:* 
+
+
+a) It will not crash. The JavaScript engine will make array slots 3 through 9 be “empty slots.”
+
+b) Here, ```a[6]``` will output ```undefined```, but the slot still remains empty rather than filled with ```undefined```. This may be an important nuance in some cases. For example, when using ```map()```, empty slots will remain empty in ```map()```’s output, but ```undefined``` slots will be remapped using the function passed to it:
+
+
+```
+var b = [undefined];
+b[2] = 1;
+console.log(b);             // (3) [undefined, empty × 1, 1]
+console.log(b.map(e => 7)); // (3) [7,         empty × 1, 7]
+```
+
+#### *Question: What is the value of typeof undefined == typeof NULL?*
+
+
+*Answer:*
+
+
+The expression will be evaluated to true, since ```NULL``` will be treated as any other undefined variable.
+
+Note: JavaScript is case-sensitive and here we are using ```NULL``` instead of ```null```.
+
+
+
+#### *Question: What would following code return?*
+
+```
+console.log(typeof typeof 1);
+```
+
+
+*Answer:*
+
+
+```string```
+
+```typeof 1``` will return ```"number"``` and ```typeof "number"``` will return ```string```.
+
+
+#### *Question: What will the following code output and why?*
+
+
+```
+var b = 1;
+function outer(){
+   	var b = 2
+    function inner(){
+        b++;
+        var b = 3;
+        console.log(b)
+    }
+    inner();
+}
+outer();
+```
+
+
+
+*Answer:*
+
+
+Output to the console will be ```“3”```.
+
+There are three closures in the example, each with it’s own ```var b``` declaration. When a variable is invoked closures will be checked in order from local to global until an instance is found. Since the ```inner``` closure has a ```b``` variable of its own, that is what will be output.
+
+Furthermore, due to hoisting the code in inner will be interpreted as follows:
+
+```
+function inner () {
+    var b; // b is undefined
+    b++; // b is NaN
+    b = 3; // b is 3
+    console.log(b); // output "3"
+}
+```
+
+
+
+
+
