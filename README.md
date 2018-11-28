@@ -412,8 +412,13 @@ for (var i = 0; i < 5; i++) {
 
 
 *Question: Assuming ```d``` is an “empty” object in scope, say:*
-```var d = {};```
+
+```
+var d = {};
+```
+
 …what is accomplished using the following code?
+
 ```
 [ 'zebra', 'horse' ].forEach(function(k) {
 	d[k] = undefined;
