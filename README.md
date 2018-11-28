@@ -173,6 +173,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is Coercion ?
 * What are the Falsy values in JavaScript ?
 * What is the diffrence between == & ===, and what about the performance ?
+* What is the difference between a pure function & impure function?
 
 #### Testing Questions:
 
