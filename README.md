@@ -298,6 +298,8 @@ setTimeout(function() {
 console.log('three');
 ```
 
+*Question: What is a potential pitfall with using typeof ```bar === "object"``` to determine if bar is an object? How can this pitfall be avoided?*
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
