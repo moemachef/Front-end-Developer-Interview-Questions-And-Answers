@@ -426,6 +426,285 @@ var d = {};
 ```
 
 
+*Question: What will the code below output to the console and why?*
+
+```
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+```
+
+
+
+*Question: What will the code below output to the console and why ?*
+
+
+```
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+```
+
+
+
+*Question: The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?*
+
+```
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        nextListItem();
+    }
+};
+```
+
+
+*Question: What is a “closure” in JavaScript? Provide an example.*
+
+
+*Question: What will be the output of the following code:*
+
+```
+for (var i = 0; i < 5; i++) {
+	setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+Explain your answer. How could the use of closures help here?
+
+
+
+
+*Question: What would the following lines of code output to the console?*
+
+```
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+```
+
+Explain your answer.
+
+
+
+*Question: What will be the output when the following code is executed? Explain.*
+
+```
+console.log(false == '0')
+console.log(false === '0')
+```
+
+
+*Question: What is the output out of the following code? Explain your answer.*
+
+```
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+
+
+*Question: What will the following code output to the console:*
+
+```
+console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
+```
+
+Explain your answer.
+
+
+
+*Question: Consider the code snippet below. What will the console output be and why?*
+
+
+```
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
+```
+
+
+
+*Question: What will the following code output to the console and why:*
+
+```
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function (){
+        return this._name;
+    }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+```
+
+What is the issue with this code and how can it be fixed.
+
+
+
+*Question: Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.
+
+The arguments to the function should be:
+
+a DOM element
+a callback function (that takes a DOM element as its argument)*
+
+
+
+
+
+*Question: Testing your this knowledge in JavaScript: What is the output of the following code?*
+
+```
+var length = 10;
+function fn() {
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+
+obj.method(fn, 1);
+```
+
+
+*Question: Consider the following code. What will the output be, and why?*
+
+```
+(function () {
+    try {
+        throw new Error();
+    } catch (x) {
+        var x = 1, y = 2;
+        console.log(x);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+
+
+*Question: What will be the output of this code?*
+
+```
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();
+```
+
+
+
+*Question: How do you clone an object?*
+
+
+
+
+*Question: What will this code print?*
+
+```
+for (let i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+
+*Question: What do the following lines output, and why?*
+
+```
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+```
+
+
+*Question: How do you add an element at the begining of an array? How do you add one at the end?*
+
+
+
+*Question: Imagine you have this code:?*
+
+
+```
+var a = [1, 2, 3];
+```
+
+a) Will this result in a crash?
+
+
+```
+a[10] = 99;
+```
+
+b) What will this output?
+
+
+```
+console.log(a[6]);
+```
+
+
+*Question: What is the value of typeof undefined == typeof NULL?*
+
+
+
+
+*Question: What would following code return?*
+
+
+```
+console.log(typeof typeof 1);
+```
+
+
+
+*Question: What will the following code output and why?*
+
+
+```
+var b = 1;
+function outer(){
+   	var b = 2
+    function inner(){
+        b++;
+        var b = 3;
+        console.log(b)
+    }
+    inner();
+}
+outer();
+```
+
+
+
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
