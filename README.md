@@ -17,6 +17,7 @@ If interested in getting involved, it would be the right place.
   1. **[General Questions](#general-questions)** - *[Answers](answers/general-questions.md)*
   1. **[HTML Questions](#html-questions)** - *[Answers](answers/html-questions.md)*
   1. **[CSS Questions](#css-questions)** - *[Answers](answers/css-questions.md)*
+  1. **[SASS Questions](#sass-questions)** - *[Answers](answers/sass-questions.md)*
   1. **[JS Questions](#js-questions)** - *[Answers](answers/js-questions.md)*
   1. **[Testing Questions](#testing-questions)** - *[Answers](answers/testing-questions.md)*
   1. **[Performance Questions](#performance-questions)** - *[Answers](answers/performance-questions.md)*
@@ -106,6 +107,9 @@ If interested in getting involved, it would be the right place.
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
+#### SASS Questions:
+* How to define color variable in SASS?
+* How to use mixins in SASS?
 #### JS Questions:
 * Explain why the treatment of non-dense arrays important or not important in utility libraries.
 * Explain the performance impact of deploying ES6 code, compiled to ES5, in all browsers. Explain some gotchas of deploying     ES5. Also explain some gotchas of deploying ES6.
