@@ -28,6 +28,15 @@ https://www.sitepoint.com/10-ways-minimize-reflows-improve-performance/
 #### What is Repaints?
 A repaint occurs when changes are made to elements that affect visibility but not the layout. For example, opacity, background-color, visibility, and outline. Repaints are expensive because the browser must check the visibility of all other nodes in the DOM — one or more may have become visible beneath the changed element.
 
+
+#### What is the difference between visibility:hidden and display:none?
+
+
+display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+
 #### How do you clear float?
 
 clear: both
