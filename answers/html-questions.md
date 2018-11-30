@@ -47,7 +47,17 @@ attributes, or other hacks like that.
 
 #### Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 
-*Not answered yet*
+
+- More semantic text markup
+- New form elements
+- Video and audio
+- New javascript API
+- Canvas and SVG
+- New communication API
+- Geolocation API
+- Web worker API
+- New data storage
+
 
 #### Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 
@@ -84,7 +94,11 @@ sessionStorage:
 
 #### Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 
-*Not answered yet*
+You usually put the <link> tags in between the <head> to prevent Flash of Unstyled Content which gives the user something to look at while the rest of the page is being parsed.
+
+Since Javascript blocks rendering by default, and the DOM and CSSOM construction can be also be delayed, it is usually best to keep scripts at the bottom of the page.
+
+Exceptions are if you grab the scripts asynchronously, or at least defer them to the end of the page.
 
 #### What is progressive rendering?
 
