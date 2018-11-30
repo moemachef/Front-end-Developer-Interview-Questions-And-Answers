@@ -19,6 +19,7 @@ If interested in getting involved, it would be the right place.
   1. **[CSS Questions](#css-questions)** - *[Answers](answers/css-questions.md)*
   1. **[SASS Questions](#sass-questions)** - *[Answers](answers/sass-questions.md)*
   1. **[JS Questions](#js-questions)** - *[Answers](answers/js-questions.md)*
+  1. **[JQUERY Questions](#jquery-questions)** - *[Answers](answers/jquery-questions.md)*
   1. **[Testing Questions](#testing-questions)** - *[Answers](answers/testing-questions.md)*
   1. **[Performance Questions](#performance-questions)** - *[Answers](answers/performance-questions.md)*
   1. **[Network Questions](#network-questions)** - *[Answers](answers/network-questions.md)*
@@ -179,6 +180,9 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the diffrence between == & ===, and what about the performance ?
 * What is the difference between a pure function & impure function?
 * What is composition in functional programming? 
+
+#### JQUERY Questions:
+* Describe event delegation in jQuery. 
 
 #### Testing Questions:
 
