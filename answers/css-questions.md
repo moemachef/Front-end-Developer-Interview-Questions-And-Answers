@@ -120,7 +120,16 @@ Yes, but not so many. I prefer Bootstrap.
 
 #### Have you used or implemented media queries or mobile specific layouts/CSS?
 
-Yes.
+Yes, Media query is a CSS technique introduced in CSS3. It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+
+```
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+If the browser window is 600px or smaller, the background color will be lightblue:
 
 #### Are you familiar with styling SVG?
 
