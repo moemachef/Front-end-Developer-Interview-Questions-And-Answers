@@ -2,52 +2,38 @@
 
 #### Describe event delegation in jQuery.
 
+Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 
-Suppose you’re developing a single page application that sells pictures of kittens. When the page loads, the first 20 kittens are displayed. As the user scrolls down the page, more kittens are loaded. Our HTML is shown below.
-
-```
-<section id="cats">
-  <ul>
-    <li>
-      <img src="http://placekitten.com/200/200" alt=""/>
-      <a href="/moreinfo">More info</a>
-      <button>Add to cart</button>
-    </li>
-    ...
-  </ul>
-</section>
-```
-The key is the optional second argument to on(). By passing a selector here, on() knows it’s dealing with a delegated event handler rather than a directly bound event handler.
-
-Our event handling code is a lot simpler now too. By getting a hold of event.target, and switching on it’s tagName, we can tell which element fired the event and can respond appropriately. Plus, we no longer have to attach event handlers for elements loaded in $(window).scroll, as the events fired by these new elements are delegated to the parent element.
-
-A potential ‘gotcha’ to be aware of when using event delegation is that any event handlers attached to child elements are handled before the deletated event handler fires. Therefore, it’s possible for a child event handler to call event.stopPropagation() or return false, which will prevent the event from bubbling up to the delegated event handler, and leave you scratching your head as to why your event isn’t being delegated.
+For the remainder of the lesson, we will reference the following HTML structure:
 
 ```
-$(document).ready(function() {
-  $('#cats')
-    .on('click', 'img, a, button', function(event) {
-      event.preventDefault();
-      var target = event.target;
+<html>
+<body>
+<div id="container">
+    <ul id="list">
+        <li><a href="http://domain1.com">Item #1</a></li>
+        <li><a href="/local/path/1">Item #2</a></li>
+        <li><a href="/local/path/2">Item #3</a></li>
+        <li><a href="http://domain4.com">Item #4</a></li>
+    </ul>
+</div>
+</body>
+</html>
+```
+When an anchor in our #list group is clicked, we want to log its text to the console. Normally we could directly bind to the click event of each anchor using the .on() method:
 
-  switch(target.tagName.toLowerCase()) {
-    case 'img':
-      loadImage();
-      break;
-    case 'a':
-      moreInfo();
-      break;
-    case 'button':
-      addToCart();
-      break;
-    default:
-      // do nothing
-  }
-});
-
-  $(window).scroll(function() {
-    var fragment = loadNewKittens();
-    fragment.appendTo('#cats ul');
-  });
+```
+// Attach a directly bound event handler
+$( "#list a" ).on( "click", function( event ) {
+    event.preventDefault();
+    console.log( $( this ).text() );
 });
 ```
+While this works perfectly fine, there are drawbacks. Consider what happens when we add a new anchor after having already bound the above listener:
+
+```
+// Add a new element on to our existing list
+$( "#list" ).append( "<li><a href='http://newdomain.com'>Item #5</a></li>" );
+```
+
+If we were to click our newly added item, nothing would happen. This is because of the directly bound event handler that we attached previously. Direct events are only attached to elements at the time the .on() method is called. In this case, since our new anchor did not exist when .on() was called, it does not get the event handler.
