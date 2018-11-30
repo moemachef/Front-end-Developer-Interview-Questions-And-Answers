@@ -38,6 +38,7 @@ Use `lang` (or `xml:lang` for XHTML) in tags. Also metadata and
 - `<meta charset='UTF-8'>`
 - `font-size` for `:lang({language_code})` selectors in CSS
 - difference in word langth for each language
+- Using symbols which acceptable in some languages and other doesn't 
 
 #### What are `data-` attributes good for?
 
