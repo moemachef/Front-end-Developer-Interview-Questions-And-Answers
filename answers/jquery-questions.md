@@ -4,7 +4,6 @@
 
 Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 
-For the remainder of the lesson, we will reference the following HTML structure:
 
 ```
 <html>
