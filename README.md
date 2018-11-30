@@ -73,6 +73,7 @@ If interested in getting involved, it would be the right place.
 
 * What is reflow?What causes reflow?How could you reduce reflow?
 * What is Repaints?
+* What is the difference between visibility:hidden and display:none?
 * How do you clear float?  
 * What is the difference between classes and ID's in CSS?
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
