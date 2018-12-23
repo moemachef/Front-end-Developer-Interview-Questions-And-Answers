@@ -41,3 +41,5 @@ A Controlled Component is one that takes its current value through props and not
 
 A Uncontrolled Component is one that stores its own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
 
+https://www.edureka.co/blog/interview-questions/react-interview-questions
+
