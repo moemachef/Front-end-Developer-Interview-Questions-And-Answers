@@ -455,3 +455,7 @@ Characteristics of Impure functions:
 #### What is composition in functional programming? 
 
 Taking the output of one function and putting it directly in the input of another function, instead of calling one function and then calling another function.
+
+
+#### What is a Thunk? 
+A Thunk is a function that have everything already that need to have (doesn't need to pass arguments) to give an output back once it has been called, It contain closured state that act like a token used in application level. It act as container that we can use anywhere in the application.
