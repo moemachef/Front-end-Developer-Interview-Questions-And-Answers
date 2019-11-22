@@ -54,6 +54,7 @@ A function's this keyword behaves a little differently in JavaScript compared to
 In most cases, the value of this is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the bind method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding (it retains the this value of the enclosing lexical context).
 
 https://www.youtube.com/watch?v=gvicrj31JOM
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 #### Explain how prototypal inheritance works
