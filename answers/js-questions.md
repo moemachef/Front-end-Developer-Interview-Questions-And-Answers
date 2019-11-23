@@ -50,7 +50,9 @@ less memory).
 'this' in JavaScript refers to the object that is executing the function.
 
 1 - If the function is a method in an object, 'this' refers to the Object itself.
+
 2 - If the function is not part of an object, 'this' refers to the window in browsers and global in node.
+
 3 - If the new operator used on normal function, it will create new empty object and set 'this' to the empty object.
 
 A function's this keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between strict mode and non-strict mode.
