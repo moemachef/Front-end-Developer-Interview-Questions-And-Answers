@@ -65,6 +65,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 #### Explain how prototypal inheritance works
 
+*Objects are built by constructor calls (function with a new key word) not by constructors, In class based languages (like Java or C++) prototypal inheritance is a copy relationship (If my son lose a leg I won't lose a leg too), In JS prototypal inheritance is a link relationship (If my son lose a leg I lose a leg too)*
+
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not provide a class implementation per se (the class keyword is introduced in ES2015, but is syntactical sugar, JavaScript remains prototype-based).
 
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
