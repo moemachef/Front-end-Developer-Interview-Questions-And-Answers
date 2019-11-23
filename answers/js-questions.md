@@ -87,6 +87,9 @@ CommonJS using the keywords require and exports. require is a function used to i
 AMD (Asynchronous Module Definition) was born as CommonJS wasn’t suited for the browsers early on. As the name implies, it supports asynchronous module loading. The function is called only when the requested modules are finished loading. The define function takes the first argument as an array of dependency modules. These modules are loaded in a non-blocking manner in the background and once the loading is completed, the callback function is executed.
 
 
+https://auth0.com/blog/javascript-module-systems-showdown/
+
+
 #### Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
 An IIFE (pronouced as ‘iffy’) is an abbreviation for Immediately Invoked Function Expression. It is a common Javascript design pattern used by popular JS libraries such as jQuery, Backbone.js. Purpose of using an IIFE is to maintain code inside of a local scope. This means, to be able to use global object inside of IIFE, you will need to pass it as arguments.
 
