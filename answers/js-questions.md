@@ -82,6 +82,8 @@ https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-d
 #### What do you think of AMD vs CommonJS?
 
 CommonJS using the keywords require and exports. require is a function used to import functions from another module. exports is an object where any function put into it will get exported. NodeJS implementation They are heavily influenced by CommonJS specification. The major difference arises in the exports object. NodeJS modules use module.exports as the object to get exported while CommonJS uses just the exports variable.
+
+
 AMD (Asynchronous Module Definition) was born as CommonJS wasn’t suited for the browsers early on. As the name implies, it supports asynchronous module loading. The function is called only when the requested modules are finished loading. The define function takes the first argument as an array of dependency modules. These modules are loaded in a non-blocking manner in the background and once the loading is completed, the callback function is executed.
 
 
