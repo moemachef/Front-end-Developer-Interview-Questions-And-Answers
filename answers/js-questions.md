@@ -390,8 +390,43 @@ Web/Browser console using console.log. Firebug, Developer Tools, stop points
 for loop, for..in, for each..in, map, reduce etc.
 
 #### Explain the difference between mutable and immutable objects.
+
+Mutable objects are objects that can be modified after it has been created, unmutable objects are objects that can not be modified after it has been created
+
+https://medium.com/@ibraheemabukaff/mutability-immutability-in-javascript-48022d660015
+
 #### What is an example of an immutable object in JavaScript?
+
+```
+let a = {foo: "bar"};
+let b = Object.assign({},a);
+b.foo = "bar2"
+console.log(a); // {foo: "bar"}
+console.log(b);// {foo: "bar2"}
+console.log(b === a) // false
+```
+
+To change only the object `b` ,we assigned it to` Object.assign({},a)`. by this way we kept the object `a` in the original state and the object `b` can changed according to our needs without affecting object `a` .
+
 #### What are the pros and cons of immutability?
+
+Immutability has several advantages, including (but not limited to):
+
+Programs with immutable objects are less complicated to think about, since you don't need to worry about how an object may evolve over time.
+You don't need to make defensive copies of immutable objects when returning or passing to other functions, since there is no possibility an immutable object will be modified behind your back.
+One copy of an object is just as good as another, so you can cache objects or re-use the same object multiple times.
+Immutable objects are good for sharing information between threads in a multi-threaded environment since they don't need to be synchronized.
+Operations on immutable objects return new immutable objects while operations that cause side-effects on mutable objects usually return void. This means several operations can be chained together. For instance
+("foo" + "bar" + "baz").length()
+
+In languages where functions are first class values, operations like map, reduce, filter, etc. are basic operations on collections. These can be combined in many ways, and can replace most loops in a program.
+There are of course some disadvantages:
+
+Cyclic data structures such as graphs are difficult to build. If you have two objects which can't be modified after initialization, how can you get them to point to each other?
+Allocating lots and lots of small objects rather than modifying ones you already have can have a performance impact. Usually the complexity of either the allocator or the garbage collector depends on the number of objects on the heap.
+Naive implementations of immutable data structures can result in extremely poor performance. For instance, concatenating many immutable strings (like in Java) is O(n2) when the best algorithm is O(n). It is possible to write efficient immutable data structures, it just takes a little more thought.
+
+
 #### How can you achieve immutability in your own code?
 
 Mutable objects are those whose state is allowed to change over time. An immutable value is the exact opposite — after it has been created, it can never change. Strings and Numbers are inherently immutable in javascript.
