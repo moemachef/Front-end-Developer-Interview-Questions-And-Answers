@@ -426,6 +426,8 @@ Cyclic data structures such as graphs are difficult to build. If you have two ob
 Allocating lots and lots of small objects rather than modifying ones you already have can have a performance impact. Usually the complexity of either the allocator or the garbage collector depends on the number of objects on the heap.
 Naive implementations of immutable data structures can result in extremely poor performance. For instance, concatenating many immutable strings (like in Java) is O(n2) when the best algorithm is O(n). It is possible to write efficient immutable data structures, it just takes a little more thought.
 
+https://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability
+
 
 #### How can you achieve immutability in your own code?
 
