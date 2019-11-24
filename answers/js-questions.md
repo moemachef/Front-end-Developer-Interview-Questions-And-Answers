@@ -459,6 +459,8 @@ It is a constantly running process that checks if the call stack is empty. Imagi
 3.Queue :- A JavaScript runtime contains a message queue, which is a list of messages to be processed and the associated callback functions to execute. When the stack has enough capacity, a message is taken out of the queue and processed which consists of calling the associated function (and thus creating an initial stack frame). The message processing ends when the stack becomes empty again. In basic words , these messages are queued in response to external async events(such as a mouse being clicked or receiving the response to an HTTP request), given a callback function has been provided. If, for example a user were to click a button and no callback function was provided — no message would have been enqueued.
 
 
+https://www.youtube.com/watch?v=jJ6ccR3nF_c&t=247s
+
 #### What does unobtrusive mean in JavaScript?
 Unobtrusive is a JavaScript methodology that helps overcome browser inconsistencies through the separation of page functionality and structure.
 
