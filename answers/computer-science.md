@@ -42,4 +42,4 @@ It's how much more memory is required by doubling the problem set
 
 
 
-https://www.theavocoder.com/new-page-1
+https://www.theavocoder.com/algorithms-data-structures
