@@ -119,9 +119,9 @@ On the flip side of this equation, tags such as <b> and <i> are not semantic. Th
 
 Examples of semantic HTML tags include:
 
-- Header tags <h1> through <h6>
-- <blockquote>
-- <code>
-- <em>
+- ```Header tags <h1> through <h6>```
+- ```<blockquote>```
+- ```<code>```
+- ```<em>```
 There are many more semantic HTML tags to use as you build a standards-compliant website.
 https://www.lifewire.com/why-use-semantic-html-3468271
