@@ -68,6 +68,7 @@ If interested in getting involved, it would be the right place.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?
 * Have you used different HTML templating languages before?
+* What is Semantic HTML?
 
 #### CSS Questions:
 
