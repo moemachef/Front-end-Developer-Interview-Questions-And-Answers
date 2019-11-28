@@ -109,6 +109,7 @@ If interested in getting involved, it would be the right place.
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
+* What does 'Pixel Perfect' mean? 
 
 #### SASS Questions:
 * How to define color variable in SASS?
