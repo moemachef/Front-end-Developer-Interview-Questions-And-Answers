@@ -316,3 +316,9 @@ Grid is by far the most intuitive approach for creating grid-based layouts (it b
 translate() is a value of CSS transform. Changing transform or opacity does not trigger browser reflow or repaint but does trigger compositions; whereas changing the absolute positioning triggers reflow. transform causes the browser to create a GPU layer for the element but changing absolute positioning properties uses the CPU. Hence translate() is more efficient and will result in shorter paint times for smoother animations.
 
 When using translate(), the element still occupies its original space (sort of like position: relative), unlike in changing the absolute positioning.
+
+
+
+#### What does 'Pixel Perfect' mean?
+
+If someone says "I want a pixel perfect implementation of the design in HTML" he refers to creating a HTML page from the design which looks exactly like the design - down to every pixel.
