@@ -139,7 +139,7 @@ If interested in getting involved, it would be the right place.
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
-* Describe event bubbling.
+* Describe event bubbling, and mention how to stop it.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document ready event?
