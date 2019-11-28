@@ -109,3 +109,19 @@ the whole content is loaded and renders each part earlier.
 
 Yes. Jinja2 and Django template language in Python. Jade and EJS in JavaScript.
 Some more in other languages.
+
+#### What is Semantic HTML?
+
+Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation. For example, a <p> tag indicates that the enclosed text is a paragraph. This is both semantic and presentational because people know what paragraphs are, and browsers know how to display them.
+
+
+On the flip side of this equation, tags such as <b> and <i> are not semantic. They define only how the text should look (bold or italic), and don't provide any additional meaning to the markup.
+
+Examples of semantic HTML tags include:
+
+- Header tags <h1> through <h6>
+- <blockquote>
+- <code>
+- <em>
+There are many more semantic HTML tags to use as you build a standards-compliant website.
+https://www.lifewire.com/why-use-semantic-html-3468271
