@@ -254,10 +254,12 @@ Function expressions are not hoisted and therefore can not be used before they h
 
 https://medium.com/bluekiri/the-confusion-of-javascript-scope-and-hoisting-3e9c759eb419
 
-#### Describe event bubbling.
+#### Describe event bubbling, and mention how to stop it.
 
 It's when an event is bubbled into container elements, in the higher level of a
 DOM tree.
+
+We can stop it using ```event.stopPropagation();```
 
 #### What's the difference between an "attribute" and a "property"?
 
