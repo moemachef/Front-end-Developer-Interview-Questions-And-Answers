@@ -322,3 +322,12 @@ When using translate(), the element still occupies its original space (sort of l
 #### What does 'Pixel Perfect' mean?
 
 If someone says "I want a pixel perfect implementation of the design in HTML" he refers to creating a HTML page from the design which looks exactly like the design - down to every pixel.
+
+
+#### How to deliver responsive images across multiple devices.
+
+- Using client hints (DPR, Width, and Viewport-Width) — very less support.
+
+- Using srcset and sizes attributes of the img HTML tag — supported by all major browsers.
+
+https://blog.imagekit.io/how-to-deliver-responsive-images-to-browsers-across-multiple-devices-30cfae17390e
