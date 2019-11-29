@@ -126,3 +126,9 @@ Examples of semantic HTML tags include:
 There are many more semantic HTML tags to use as you build a standards-compliant website.
 
 https://www.lifewire.com/why-use-semantic-html-3468271
+
+
+
+#### What is the Pros and Cons of each putting script in head - putting script in end of body tag - using Async - using Defer ?
+
+https://medium.com/@raviroshan.talk/async-defer-javascript-loading-strategies-da489a0ba47e
