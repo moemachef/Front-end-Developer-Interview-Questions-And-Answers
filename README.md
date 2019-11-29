@@ -70,6 +70,7 @@ If interested in getting involved, it would be the right place.
 * What is progressive rendering?
 * Have you used different HTML templating languages before?
 * What is Semantic HTML?
+* What is the Pros and Cons of each: putting script in head - putting script in end of body tag - using Async - using Defer ?
 
 #### CSS Questions:
 
