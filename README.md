@@ -183,7 +183,8 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the diffrence between == & ===, and what about the performance ?
 * What is the difference between a pure function & impure function?
 * What is composition in functional programming? 
-* What is a Thunk? 
+* What is a Thunk?
+* What is the difference between var, let and const in Javascript?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
