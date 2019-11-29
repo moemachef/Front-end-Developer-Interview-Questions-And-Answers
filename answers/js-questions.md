@@ -546,3 +546,17 @@ Taking the output of one function and putting it directly in the input of anothe
 
 #### What is a Thunk? 
 A Thunk is a function that have everything already that need to have (doesn't need to pass arguments) to give an output back once it has been called, It contain closured state that act like a token used in application level. It act as container that we can use anywhere in the application.
+
+
+#### What is the difference between var, let and const in Javascript?
+
+var: The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+
+let: The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+
+const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+
+
