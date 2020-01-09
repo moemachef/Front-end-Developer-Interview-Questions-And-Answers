@@ -55,6 +55,7 @@ If interested in getting involved, it would be the right place.
 * What does CORS stand for and what issue does it address?
 * What do you know about design patterns and which one is your favourite?
 * What are Web Components?
+* What are the differences between Angular , React and Vue?
 
 #### HTML Questions:
 
