@@ -46,8 +46,11 @@ Selenium is not just a single tool or a utility, rather a package of several tes
 
 The suite package constitutes the following sets of tools:
 1- Selenium Integrated Development Environment (IDE)
+
 2- Selenium Remote Control (RC)
+
 3- Selenium WebDriver
+
 4- Selenium Grid
 
 https://www.softwaretestinghelp.com/selenium-interview-questions-answers/
