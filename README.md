@@ -71,6 +71,7 @@ If interested in getting involved, it would be the right place.
 * Have you used different HTML templating languages before?
 * What is Semantic HTML?
 * What is the Pros and Cons of each: putting script in head - putting script in end of body tag - using Async - using Defer ?
+* What do you know about design patterns and which one is your favourite?
 
 #### CSS Questions:
 
