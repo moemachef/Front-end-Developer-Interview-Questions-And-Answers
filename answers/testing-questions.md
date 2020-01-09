@@ -37,3 +37,17 @@ provides options to check which indentation should be used(it is not actually
 what a linter should do though). A linter can also check if there is any used
 variable which hasn't been declared, or if there is any unused variable. In
 short, linting is a kind of static analysis.
+
+#### What is Selenium? What are the different Selenium components?
+
+Selenium is one of the most popular automated testing suites. Selenium is designed in a way to support and encourage automation testing of functional aspects of web-based applications and a wide range of browsers and platforms. Due to its existence in the open source community, it has become one of the most accepted tools amongst the testing professionals.
+
+Selenium is not just a single tool or a utility, rather a package of several testing tools and for the same reason, it is referred to as a Suite. Each of these tools is designed to cater different testing and test environment requirements.
+
+The suite package constitutes the following sets of tools:
+1- Selenium Integrated Development Environment (IDE)
+2- Selenium Remote Control (RC)
+3- Selenium WebDriver
+4- Selenium Grid
+
+https://www.softwaretestinghelp.com/selenium-interview-questions-answers/
