@@ -230,3 +230,10 @@ https://dev.to/aershov24/9-unusual-design-patterns-interview-question-with-answe
 https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 https://codingcompiler.com/javascript-design-patterns/
+
+
+#### What are Web Components?
+
+https://developer.mozilla.org/en-US/docs/Web/Web_Components
+
+https://css-tricks.com/an-introduction-to-web-components/
