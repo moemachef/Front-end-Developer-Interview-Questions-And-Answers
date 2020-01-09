@@ -54,6 +54,7 @@ If interested in getting involved, it would be the right place.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?
 * What do you know about design patterns and which one is your favourite?
+* What are Web Components?
 
 #### HTML Questions:
 
