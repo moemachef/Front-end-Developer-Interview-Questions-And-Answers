@@ -265,3 +265,5 @@ Jenkins is a free open source Continuous Integration tool and automation server 
 It is known as an automated Continuous Delivery tool that helps to build and test the software system with easy integration of changes to the system. Jenkins follows Groovy Scripting.
 
 Also, it enables developers to continuously check in their code and also analyze the post-build actions. The automation testers can use to run their tests as soon as the new code is added or code is modified.
+
+https://www.softwaretestinghelp.com/jenkins-interview-questions/
