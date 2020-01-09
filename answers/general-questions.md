@@ -267,3 +267,8 @@ It is known as an automated Continuous Delivery tool that helps to build and tes
 Also, it enables developers to continuously check in their code and also analyze the post-build actions. The automation testers can use to run their tests as soon as the new code is added or code is modified.
 
 https://www.softwaretestinghelp.com/jenkins-interview-questions/
+
+
+#### What are the advantages of GraphQL over REST ?
+
+https://medium.com/@back4apps/graphql-vs-rest-62a3d6c2021d
