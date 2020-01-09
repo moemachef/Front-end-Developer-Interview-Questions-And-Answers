@@ -59,6 +59,7 @@ If interested in getting involved, it would be the right place.
 * What are the differences between Grunt and Rollup?
 * What is tree shaking?
 * What is Jenkins?
+* What are the advantages of GraphQL over REST ?
 
 #### HTML Questions:
 
