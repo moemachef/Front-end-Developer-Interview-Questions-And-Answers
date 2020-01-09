@@ -226,5 +226,7 @@ is a standard to enable cross-site HTTP requests for:
 #### What do you know about design patterns and which one is your favourite?
 
 https://dev.to/aershov24/9-unusual-design-patterns-interview-question-with-answers-3gjl
+
 https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
+
 https://codingcompiler.com/javascript-design-patterns/
