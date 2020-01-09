@@ -45,6 +45,7 @@ Selenium is one of the most popular automated testing suites. Selenium is design
 Selenium is not just a single tool or a utility, rather a package of several testing tools and for the same reason, it is referred to as a Suite. Each of these tools is designed to cater different testing and test environment requirements.
 
 The suite package constitutes the following sets of tools:
+
 1- Selenium Integrated Development Environment (IDE)
 
 2- Selenium Remote Control (RC)
