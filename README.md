@@ -53,6 +53,7 @@ If interested in getting involved, it would be the right place.
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?
+* What do you know about design patterns and which one is your favourite?
 
 #### HTML Questions:
 
@@ -71,7 +72,6 @@ If interested in getting involved, it would be the right place.
 * Have you used different HTML templating languages before?
 * What is Semantic HTML?
 * What is the Pros and Cons of each: putting script in head - putting script in end of body tag - using Async - using Defer ?
-* What do you know about design patterns and which one is your favourite?
 
 #### CSS Questions:
 
