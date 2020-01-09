@@ -34,7 +34,7 @@ such as a play button, a timecode number, a scrubber progress bar etc. These ele
 part of your “regular DOM”, but instead, part of the “Shadow DOM”.
   
   
-  #### What is the diffrence between Controlled Component & Uncontrolled Component ?
+#### What is the diffrence between Controlled Component & Uncontrolled Component ?
   
 A Controlled Component is one that takes its current value through props and notifies changes through callbacks like onChange. A parent component "controls" it by handling the callback and managing its own state and passing the new values as props to the controlled component. You could also call this a "dumb component".
 
@@ -42,4 +42,9 @@ A Controlled Component is one that takes its current value through props and not
 A Uncontrolled Component is one that stores its own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions
+
+
+#### What are the advantages of server side rendering ?
+
+https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
 
