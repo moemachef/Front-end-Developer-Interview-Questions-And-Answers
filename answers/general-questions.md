@@ -244,3 +244,10 @@ https://css-tricks.com/an-introduction-to-web-components/
 https://dzone.com/articles/react-vs-angular-vs-vuejs-a-complete-comparison-gu
 
 https://medium.com/@onlineinerview/angular-react-or-vue-which-to-choose-63fe407890e1
+
+
+#### What are the differences between Grunt and Rollup?
+
+https://medium.com/thron-tech/rollup-is-a-great-bundling-tool-but-is-it-the-one-you-should-use-cdb9ea175056
+
+https://stackshare.io/stackups/grunt-vs-rollup
