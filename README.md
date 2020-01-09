@@ -204,6 +204,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
+* What is Selenium? What are the different Selenium components?
 
 #### Performance Questions:
 
