@@ -57,6 +57,7 @@ If interested in getting involved, it would be the right place.
 * What are Web Components?
 * What are the differences between Angular , React and Vue?
 * What are the differences between Grunt and Rollup?
+* What is tree shaking?
 
 #### HTML Questions:
 
