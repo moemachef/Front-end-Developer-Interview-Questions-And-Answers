@@ -251,3 +251,8 @@ https://medium.com/@onlineinerview/angular-react-or-vue-which-to-choose-63fe4078
 https://medium.com/thron-tech/rollup-is-a-great-bundling-tool-but-is-it-the-one-you-should-use-cdb9ea175056
 
 https://stackshare.io/stackups/grunt-vs-rollup
+
+
+#### What is tree shaking?
+
+The Tree Shaking is a concept of dead code elimination from projects. The code present in your project but neither referenced nor used will be dropped here. It will eliminate the unused modules during the build process, making user application lightweight.
