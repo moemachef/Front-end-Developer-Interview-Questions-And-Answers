@@ -225,6 +225,15 @@ is a standard to enable cross-site HTTP requests for:
 
 #### What do you know about design patterns and which one is your favourite?
 
+In general there are 3 main categories: Creational - Structural - Behavioural.
+
+
+My favourite is Factory pattern which is from the creational category, from its name we give it input and it produces output and thus it provides clean code , reusability and flexibility.
+
+
+
+https://www.youtube.com/watch?v=kuirGzhGhyw
+
 https://dev.to/aershov24/9-unusual-design-patterns-interview-question-with-answers-3gjl
 
 https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
