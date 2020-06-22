@@ -114,9 +114,9 @@ Some more in other languages.
 
 A semantic element clearly describes its meaning to both the browser and the developer.
 
-Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+Examples of non-semantic elements: ```<div>``` and ```<span>``` - Tells nothing about its content.
 
-Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+Examples of semantic elements: ```<form>```, ```<table>```, and ```<article>``` - Clearly defines its content.
   
   
 https://www.w3schools.com/html/html5_semantic_elements.asp
