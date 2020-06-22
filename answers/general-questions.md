@@ -281,3 +281,5 @@ https://www.softwaretestinghelp.com/jenkins-interview-questions/
 #### What are the advantages of GraphQL over REST ?
 
 https://medium.com/@back4apps/graphql-vs-rest-62a3d6c2021d
+
+https://www.youtube.com/watch?v=PeAOEAmR0D0
