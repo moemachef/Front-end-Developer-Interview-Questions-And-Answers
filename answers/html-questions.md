@@ -112,21 +112,14 @@ Some more in other languages.
 
 #### What is Semantic HTML?
 
-Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation. 
+A semantic element clearly describes its meaning to both the browser and the developer.
 
-For example, a ```<p>``` tag indicates that the enclosed text is a paragraph. This is both semantic and presentational because people know what paragraphs are, and browsers know how to display them. On the flip side of this equation, tags such as ```<b>``` and ```<i>``` are not semantic. They define only how the text should look (bold or italic), and don't provide any additional meaning to the markup.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
 
-Examples of semantic HTML tags include:
-
-- ```Header tags <h1> through <h6>```
-- ```<blockquote>```
-- ```<code>```
-- ```<em>```
-
-There are many more semantic HTML tags to use as you build a standards-compliant website.
-
-https://www.lifewire.com/why-use-semantic-html-3468271
-
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+  
+  
+https://www.w3schools.com/html/html5_semantic_elements.asp
 
 
 #### What is the Pros and Cons of each: putting script in head - putting script in end of body tag - using Async - using Defer ?
