@@ -2,9 +2,13 @@
 
 #### What is the difference between HTTP protocol and TCP protocol?
 
-1. TCP is a core operates a relatively high level; HTTP is an Application Layer protocol that is a request/response standard found in client server computing.
+HTTP = Envelope/Parcel, IP = Post Office, TCP = Delivery Truck.
 
-2. TCP provides communication services at an intermediate level between an application program and the IP; in HTTP there are a series of sessions in which the client sends a request and the server sends a reply message back to the client including the request, an error message, or another piece of information.
+One thing to bear in mind is you usually use both at the same time. Each one does a different job. The jobs they do is what primarily distinguishes them.
+
+TCP/IP is for getting bits of data from one place to another. It's only concerned with connecting computers to each other and moving the data, not about what kind of data it is. So when you are using the web, it makes sure that the data bits coming from the server get to your machine, without errors, and in the order they were sent. It is called a "transport protocol". Think of it like a post office delivery truck.
+
+HTTP is a kind of data packaging used by your browser, and web servers. It's not involved with delivery, just with what you have after the delivery arrives. Because it pertains to your application (program) it is called an "application protocol". Think of it as the envelope or the parcel.
 
 
 Read more: Difference Between TCP and HTTP | Difference Between http://www.differencebetween.net/technology/internet/difference-between-tcp-and-http/#ixzz5GoIqbxq2
