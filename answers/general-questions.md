@@ -231,6 +231,7 @@ In general there are 3 main categories: Creational - Structural - Behavioural.
 My favourite is Factory pattern which is from the creational category, from its name we give it input and it produces output and thus it provides clean code , reusability and flexibility.
 
 
+https://www.toptal.com/javascript/comprehensive-guide-javascript-design-patterns
 
 https://www.youtube.com/watch?v=kuirGzhGhyw
 
