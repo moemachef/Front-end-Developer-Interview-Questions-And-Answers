@@ -230,6 +230,12 @@ In general there are 3 main categories: Creational - Structural - Behavioural.
 
 My favourite is Factory pattern which is from the creational category, from its name we give it input and it produces output and thus it provides clean code , reusability and flexibility.
 
+on the other hand an anti-pattern represents bad practice, An example of an anti-pattern would be modifying the ```Object``` class prototype. Almost all objects in JavaScript inherit from Object (remember that JavaScript uses prototype-based inheritance) so imagine a scenario where you altered this prototype. Changes to the Object prototype would be seen in all of the objects that inherit from this prototype—which would be most JavaScript objects. This is a disaster waiting to happen.
+
+Another example, similar to one mentioned above, is modifying objects that you don’t own. An example of this would be overriding a function from an object used in many scenarios throughout the application. If you are working with a large team, imagine the confusion this would cause; you’d quickly run into naming collisions, incompatible implementations, and maintenance nightmares.
+
+Similar to how it is useful to know about all of the good practices and solutions, it is also very important to know about the bad ones too. This way, you can recognize them and avoid making the mistake up front.
+
 
 https://www.toptal.com/javascript/comprehensive-guide-javascript-design-patterns
 
