@@ -48,3 +48,19 @@ https://www.edureka.co/blog/interview-questions/react-interview-questions
 
 https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
 
+
+#### What is Styled-Components ?
+
+Styled components are a CSS-in-JS tool that bridges the gap between components and styling, offering numerous features to get you up and running in styling components in a functional and reusable way.
+
+In React’s own words, styled components are “visual primitives for components”, and their goal is to give us a flexible way to style components. The result is a tight coupling between components and their styles.
+
+Apart from helping you to scope styles, styled components include the following features:
+
+- Automatic vendor prefixing, You can use standard CSS properties, and styled components will add vendor prefixes should they be needed.
+
+- Unique class names Styled components are independent of each other, and you do not have to worry about their names because the library handles that for you.
+
+- Elimination of dead styles Styled components remove unused styles, even if they’re declared in your code.
+
+https://www.smashingmagazine.com/2020/07/styled-components-react/
