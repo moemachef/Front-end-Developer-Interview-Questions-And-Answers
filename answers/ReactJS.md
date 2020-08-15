@@ -63,4 +63,6 @@ Apart from helping you to scope styles, styled components include the following 
 
 - Elimination of dead styles Styled components remove unused styles, even if they’re declared in your code.
 
+https://styled-components.com/docs/basics
+
 https://www.smashingmagazine.com/2020/07/styled-components-react/
