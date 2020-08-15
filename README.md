@@ -745,7 +745,7 @@ outer();
 * Virtual DOM vs. Shadow DOM, are they the same thing?
 * What is the diffrence between Controlled Component & Uncontrolled Component ?
 * What are the advantages of server side rendering ?
-
+* What is Styled-Components ?
 
 #### Computer Science Questions:
 
