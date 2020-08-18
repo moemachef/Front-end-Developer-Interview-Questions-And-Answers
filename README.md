@@ -748,6 +748,7 @@ outer();
 * What are the advantages of server side rendering ?
 * What is Styled-Components ?
 * What does lifting state means in React?
+* What is Higher-Order Components in React ?
 
 #### Computer Science Questions:
 
