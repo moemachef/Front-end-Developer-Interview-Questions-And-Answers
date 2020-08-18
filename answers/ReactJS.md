@@ -92,3 +92,8 @@ https://medium.com/@chathuranga94/introduction-to-react-hooks-4694fe2d0fc0
 #### How does Redux work ?
 
 https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6
+
+
+#### What is Redux Thunk ?
+
+https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
