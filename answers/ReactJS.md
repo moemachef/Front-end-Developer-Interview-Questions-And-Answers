@@ -71,3 +71,9 @@ https://www.smashingmagazine.com/2020/07/styled-components-react/
 #### What does lifting state means in React?
 
 https://medium.com/@jbbpatel94/react-react-state-shared-state-lifting-state-up-af17ff4e2972
+
+
+#### What is Higher-Order Components in React ?
+
+https://medium.com/@rossbulat/how-to-use-react-higher-order-components-c0be6821eb6c
+
