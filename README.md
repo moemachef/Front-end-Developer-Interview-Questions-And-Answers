@@ -196,6 +196,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is a Thunk?
 * What is the difference between var, let and const in Javascript?
 * What is the difference between Promises and async-await?
+* How to use array destructuring ?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
