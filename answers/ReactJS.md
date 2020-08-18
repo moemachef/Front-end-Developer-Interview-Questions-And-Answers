@@ -77,3 +77,9 @@ https://medium.com/@jbbpatel94/react-react-state-shared-state-lifting-state-up-a
 
 https://medium.com/@rossbulat/how-to-use-react-higher-order-components-c0be6821eb6c
 
+
+
+#### How React works under the hood ?
+
+https://www.freecodecamp.org/news/react-under-the-hood/
+
