@@ -66,3 +66,8 @@ Apart from helping you to scope styles, styled components include the following 
 https://styled-components.com/docs/basics
 
 https://www.smashingmagazine.com/2020/07/styled-components-react/
+
+
+#### What does lifting state means in React?
+
+https://medium.com/@jbbpatel94/react-react-state-shared-state-lifting-state-up-af17ff4e2972
