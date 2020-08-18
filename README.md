@@ -751,6 +751,7 @@ outer();
 * What is Higher-Order Components in React ?
 * How React works under the hood ?
 * What is the most important React Hooks you used ?
+* How does Redux work ?
 
 #### Computer Science Questions:
 
