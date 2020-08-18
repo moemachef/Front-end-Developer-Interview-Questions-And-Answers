@@ -87,3 +87,8 @@ https://www.freecodecamp.org/news/react-under-the-hood/
 #### What is the most important React Hooks you used ?
 
 https://medium.com/@chathuranga94/introduction-to-react-hooks-4694fe2d0fc0
+
+
+#### How does Redux work ?
+
+https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6
