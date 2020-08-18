@@ -752,6 +752,7 @@ outer();
 * How React works under the hood ?
 * What is the most important React Hooks you used ?
 * How does Redux work ?
+* What is Redux Thunk ?
 
 #### Computer Science Questions:
 
