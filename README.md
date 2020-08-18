@@ -747,6 +747,7 @@ outer();
 * What is the diffrence between Controlled Component & Uncontrolled Component ?
 * What are the advantages of server side rendering ?
 * What is Styled-Components ?
+* What does lifting state means in React?
 
 #### Computer Science Questions:
 
