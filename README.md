@@ -749,6 +749,7 @@ outer();
 * What is Styled-Components ?
 * What does lifting state means in React?
 * What is Higher-Order Components in React ?
+* How React works under the hood ?
 
 #### Computer Science Questions:
 
