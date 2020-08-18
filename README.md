@@ -750,6 +750,7 @@ outer();
 * What does lifting state means in React?
 * What is Higher-Order Components in React ?
 * How React works under the hood ?
+* What is the most important React Hooks you used ?
 
 #### Computer Science Questions:
 
