@@ -46,7 +46,7 @@ https://www.edureka.co/blog/interview-questions/react-interview-questions
 
 #### What are Pure Components in React?
 
-Pure Components do not depend or modify the state of variables outside their scope. These are the building blocks of Functional Programming. Before we get into the details of Pure Components in React, we need to understand the concept of Pure Functions in JavaScript.
+Pure Components do not depend or modify the state of variables outside their scope. These are the building blocks of Functional Programming. Before we get into the details of Pure Components in React.
 
 https://medium.com/technofunnel/working-with-react-pure-components-166ded26ae48
 
