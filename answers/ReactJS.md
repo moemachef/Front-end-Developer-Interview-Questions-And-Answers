@@ -44,6 +44,12 @@ A Uncontrolled Component is one that stores its own state internally, and you qu
 https://www.edureka.co/blog/interview-questions/react-interview-questions
 
 
+#### What are Pure Components in React?
+
+Pure Components do not depend or modify the state of variables outside their scope. These are the building blocks of Functional Programming. Before we get into the details of Pure Components in React, we need to understand the concept of Pure Functions in JavaScript.
+
+https://medium.com/technofunnel/working-with-react-pure-components-166ded26ae48
+
 #### What are the advantages of server side rendering ?
 
 https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
