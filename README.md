@@ -745,6 +745,7 @@ outer();
 * Explain the upsides and tradeoffs of using the DllPlugin as opposed to CommonChunksPlugin.
 * Virtual DOM vs. Shadow DOM, are they the same thing?
 * What is the diffrence between Controlled Component & Uncontrolled Component ?
+* What are Pure Components in React?
 * What are the advantages of server side rendering ?
 * What is Styled-Components ?
 * What does lifting state means in React?
