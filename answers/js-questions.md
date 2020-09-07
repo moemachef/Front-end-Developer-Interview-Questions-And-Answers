@@ -568,3 +568,10 @@ https://medium.com/better-programming/should-i-use-promises-or-async-await-126ab
 #### How to use array destructuring ?
 
 https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/
+
+
+#### What is the difference between event bubbling and event capturing in JavaScript ?
+
+https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e
+
+
