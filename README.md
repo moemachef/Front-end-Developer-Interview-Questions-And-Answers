@@ -198,6 +198,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the difference between Promises and async-await?
 * How to use array destructuring ?
 * What is the difference between event bubbling and event capturing in JavaScript ?
+* What is the difference between value and reference in JavaScript ?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
