@@ -55,3 +55,8 @@ The suite package constitutes the following sets of tools:
 4- Selenium Grid
 
 https://www.softwaretestinghelp.com/selenium-interview-questions-answers/
+
+
+#### What is the difference between Enzyme's rendering methods?
+
+https://medium.com/@Yohanna/difference-between-enzymes-rendering-methods-f82108f49084
