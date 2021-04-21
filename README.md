@@ -210,6 +210,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
 * What is Selenium? What are the different Selenium components?
+* What is the difference between Enzyme's rendering methods?
 
 #### Performance Questions:
 
