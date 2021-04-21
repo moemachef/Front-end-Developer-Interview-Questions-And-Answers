@@ -575,3 +575,12 @@ https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/
 https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e
 
 
+#### What is the difference between value and reference in JavaScript ?
+
+Javascript has 5 data types that are passed by value: Boolean, null, undefined, String, and Number. We’ll call these primitive types. If a primitive type is assigned to a variable, we can think of that variable as containing the primitive value.
+
+Javascript has 3 data types that are passed by reference: Array, Function, and Object. These are all technically Objects, so we’ll refer to them collectively as Objects. Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.
+
+https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0
+
+
