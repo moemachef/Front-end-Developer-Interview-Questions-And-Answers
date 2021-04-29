@@ -196,6 +196,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is composition in functional programming? 
 * What is a Thunk?
 * What is the difference between var, let and const in Javascript?
+* Compare between let and var regarding Scoping rules, Hoisting, Creating global object property & Redeclaration ?
 * What is the difference between Promises and async-await?
 * How to use array destructuring ?
 * What is the difference between event bubbling and event capturing in JavaScript ?
