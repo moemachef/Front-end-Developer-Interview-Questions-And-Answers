@@ -28,6 +28,8 @@ If interested in getting involved, it would be the right place.
   1. **[React Questions](#react-questions)** - *[Answers](answers/ReactJS.md)*
   1. **[Computer Science Questions](#computer-science-questions)** - *[Answers](answers/computer-science.md)*
   1. **[Node Questions](#node-questions)** - *[Answers](answers/node-questions.md)*
+  1. **[Git Questions](#git-questions)** - *[Answers](answers/git-questions.md)*
+  1. **[Devops Questions](#devops-questions)** - *[Answers](answers/devops-questions.md)*
   
 
 #### General Questions:
