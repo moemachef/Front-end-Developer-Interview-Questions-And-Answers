@@ -764,6 +764,7 @@ outer();
 * What is Runtime Complexity ?
 * How can you identify runtime complexity?
 * What is Big 'O' Notation ?
+* What is Big O of array operations ?
 * What is Space Complexity ?
 
 #### Node Questions: 
