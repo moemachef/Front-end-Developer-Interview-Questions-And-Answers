@@ -581,6 +581,8 @@ Redeclaration:
 
 In strict mode, var will let you re-declare the same variable in the same scope while let raises a SyntaxError.
 
+https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var
+
 #### What is the difference between Promises and async-await?
 
 https://medium.com/better-programming/should-i-use-promises-or-async-await-126ab5c98789
