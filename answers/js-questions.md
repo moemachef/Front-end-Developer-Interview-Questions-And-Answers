@@ -607,3 +607,11 @@ Javascript has 3 data types that are passed by reference: Array, Function, and O
 https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0
 
 
+#### What is Babel?
+
+Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
+
+It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
+
+
+http://nicholasjohnson.com/blog/what-is-babel/
