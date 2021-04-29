@@ -559,6 +559,27 @@ let: The scope of a variable defined with the keyword “let” or “const” i
 const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
 “const” cannot be re-assigned to a new value. However it CAN be mutated.
 
+#### Compare between let and var regarding Scoping rules, Hoisting, Creating global object property & Redeclaration ?
+
+Scoping rules:
+
+Main difference is scoping rules. Variables declared by var keyword are scoped to the immediate function body (hence the function scope) while let variables are scoped to the immediate enclosing block denoted by { } (hence the block scope).
+
+The reason why let keyword was introduced to the language was function scope is confusing and was one of the main sources of bugs in JavaScript.
+
+Hoisting: 
+
+While variables declared with var keyword are hoisted (initialized with undefined before the code is run) which means they are accessible in their enclosing scope even before they are declared:
+
+let variables are not initialized until their definition is evaluated. Accessing them before the initialization results in a ReferenceError. Variable said to be in "temporal dead zone" from the start of the block until the initialization is processed.
+
+Creating global object property:
+
+At the top level, let, unlike var, does not create a property on the global object.
+
+Redeclaration:
+
+In strict mode, var will let you re-declare the same variable in the same scope while let raises a SyntaxError.
 
 #### What is the difference between Promises and async-await?
 
