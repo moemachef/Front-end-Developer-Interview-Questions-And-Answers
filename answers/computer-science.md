@@ -36,6 +36,26 @@ It's a way of writing out runtime complexity
 - ```O(1)``` Constant
 - ```O(n^2)``` Quadratic
 
+#### What is Big O of array operations ?
+
+push - o(1)
+
+pop - o(1)
+
+shift - o(n)
+
+unshift - o(n)
+
+concat - o(n)
+
+slice - o(n)
+
+splice - o(n)
+
+forEach/map/filter/reduce/etc. - o(n)
+
+sort - o(N * log N)
+
 #### What is Space Complexity ?
 
 It's how much more memory is required by doubling the problem set
