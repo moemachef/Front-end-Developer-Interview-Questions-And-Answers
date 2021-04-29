@@ -45,7 +45,7 @@ If interested in getting involved, it would be the right place.
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * How would you optimize a website's assets/resources?
 * How many resources will a browser download from a given domain at a time?
-  * What are the exceptions?
+* What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 * Describe how you would create a simple slideshow page.
@@ -62,7 +62,6 @@ If interested in getting involved, it would be the right place.
 * What is tree shaking?
 * What is Jenkins?
 * What are the advantages of GraphQL over REST ?
-* What does cherry-picking a commit with Git mean?
 
 #### HTML Questions:
 
@@ -774,6 +773,17 @@ outer();
 
 * What is Express.js.
 * What is middleware.
+
+#### Git Questions: 
+
+* What does cherry-picking a commit with Git mean?
+
+
+#### Devops Questions: 
+
+* What are the differences between Grunt and Rollup?
+* What is tree shaking?
+* What is Jenkins?
 
 ## License
 
