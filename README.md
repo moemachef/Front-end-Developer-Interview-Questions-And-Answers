@@ -201,6 +201,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * How to use array destructuring ?
 * What is the difference between event bubbling and event capturing in JavaScript ?
 * What is the difference between value and reference in JavaScript ?
+* What is Babel?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
