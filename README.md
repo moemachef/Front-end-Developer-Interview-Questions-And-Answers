@@ -58,9 +58,6 @@ If interested in getting involved, it would be the right place.
 * What do you know about design patterns and which one is your favourite?
 * What are Web Components?
 * What are the differences between Angular , React and Vue?
-* What are the differences between Grunt and Rollup?
-* What is tree shaking?
-* What is Jenkins?
 * What are the advantages of GraphQL over REST ?
 
 #### HTML Questions:
