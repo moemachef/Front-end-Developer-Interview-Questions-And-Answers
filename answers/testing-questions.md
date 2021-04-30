@@ -59,4 +59,21 @@ https://www.softwaretestinghelp.com/selenium-interview-questions-answers/
 
 #### What is the difference between Enzyme's rendering methods?
 
+
+Jest acts as a test runner, assertion library, and mocking library.
+
+Jest also provides Snapshot testing, the ability to create a rendered ‘snapshot’ of a component and compare it to a previously saved ‘snapshot’. The test will fail if the two do not match. Snapshots will be saved for you beside the test file that created them in an auto-generate __snapshots__ folder.
+
+Snapshot testing must be complimented with in browser testing and looking at the snapshot created when creating the initial snapshots, to ensure that the snapshot reflects the intended outcome.
+
+Enzyme, created by Airbnb, adds some great additional utility methods for rendering a component (or multiple components), finding elements, and interacting with elements. It must be installed in addition to tools already bundled with CRA.
+
+Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
+
+Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
+
+Enzyme can be used without Jest, however Enzyme must be paired with another test runner if Jest is not used.
+
+https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
+
 https://medium.com/@Yohanna/difference-between-enzymes-rendering-methods-f82108f49084
