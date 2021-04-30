@@ -105,3 +105,14 @@ https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-an
 #### What is Redux Thunk ?
 
 https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
+
+
+#### What is the Difference Between useEffect and useLayoutEffect ?
+
+It’s all in the timing. 
+
+useEffect runs asynchronously and after a render is painted to the screen.
+
+useLayoutEffect, on the other hand, runs synchronously after a render but before the screen is updated.
+
+https://daveceddia.com/useeffect-vs-uselayouteffect/
