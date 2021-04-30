@@ -29,10 +29,7 @@ The Virtual DOM is a tree of JavaScript objects that represent the real DOM elem
 
 Shadow DOM is not a standalone document like the actual DOM, but it resides in it. It's very similar to the component-based architecture of React or angular where every component has its own set of stylesheets and global styles as well. ReactJS does not use the shadow DOM for making it faster, it completely relies on the virtual one. But anyone can use this feature of HTML5 intentionally if required.
 
-The Shadow DOM is a form of encapsulation on our elements. Think about using the
-<video> tag in your browser. In a video tag, your browser will create a set of video controls
-such as a play button, a timecode number, a scrubber progress bar etc. These elements aren’t
-part of your “regular DOM”, but instead, part of the “Shadow DOM”.
+The Shadow DOM is a form of encapsulation on our elements. Think about using the ```<video>``` tag in your browser. In a video tag, your browser will create a set of video controls such as a play button, a timecode number, a scrubber progress bar etc. These elements aren’t part of your “regular DOM”, but instead, part of the “Shadow DOM”.
   
   
 #### What is the diffrence between Controlled Component & Uncontrolled Component ?
