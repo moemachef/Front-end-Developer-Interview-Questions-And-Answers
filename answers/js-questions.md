@@ -617,3 +617,14 @@ It makes available all the syntactical sugar that was added to JavaScript with t
 
 
 http://nicholasjohnson.com/blog/what-is-babel/
+
+
+#### What is Temporal Dead Zone in JS ?
+
+The term to describe the state where variables are un-reachable. They are in scope, but they aren't declared.
+
+The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
+
+You could also say that the variables exist in the TDZ from the place they get bound (when the variable gets bound to the scope it's inside) until it is declared (when a name is reserved in memory for that variable).
+
+https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/
