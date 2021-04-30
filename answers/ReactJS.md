@@ -94,7 +94,29 @@ https://www.freecodecamp.org/news/react-under-the-hood/
 
 #### What is the most important React Hooks you used ?
 
+State Hook:
+
+This useState returns value, its accessor and is initiated at the start: const [state, setState] = useState(initialState);. Thereby in retrospective, in contrast to class components by Constructor, and state manipulated functions such as handleIncrease which was bind to this scope.
+
 https://medium.com/@chathuranga94/introduction-to-react-hooks-4694fe2d0fc0
+
+Effect Hook:
+
+Effect hook here, is used to perform side effects in functional components. From familiar user cases, it could be considered combination of methods: componentDidMount, componentDidUpdate, and componentWillUnmount. So when React renders (updates the DOM including first render) component, this hook becomes applied. Typical use cases for effect hooks are data fetching, managing subscriptions and dealing with manual DOM changes.
+
+Context Hook:
+
+This is applicable when using Context API introduced in React 16.3.0 to avoid props drilling. Here context hook can be used to interact with created context.
+
+Ref Hook:
+
+Reference hook can be used to refer React element created by render method. When there are DOM changes, ref’s .current value will be up to date.
+
+Reducer Hook:
+
+This can act as an alternative for state hook. All state changes are bundled in to central function called reducer, and state will be updated according to initiated action and existing state. Developers coming from Redux, this approach should feel familiar and state hook example is rewritten as this:
+
+https://chathuranga94.medium.com/introduction-to-react-hooks-4694fe2d0fc0
 
 
 #### How does Redux work ?
