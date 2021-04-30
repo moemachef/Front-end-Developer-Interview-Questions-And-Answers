@@ -170,12 +170,12 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What tools and techniques do you use debugging JavaScript code?
 * What language constructions do you use for iterating over object properties and array items?
 * Explain the difference between mutable and immutable objects.
-  * What is an example of an immutable object in JavaScript?
-  * What are the pros and cons of immutability?
-  * How can you achieve immutability in your own code?
+* What is an example of an immutable object in JavaScript?
+* What are the pros and cons of immutability?
+* How can you achieve immutability in your own code?
 * Explain the difference between synchronous and asynchronous functions.
 * What is event loop?
-  * What is the difference between call stack and task queue?
+* What is the difference between call stack and task queue?
 * What does unobtrusive mean in JavaScript?
 * When should you use classical inheritance?
 * What is Recursion ?
@@ -200,6 +200,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the difference between event bubbling and event capturing in JavaScript ?
 * What is the difference between value and reference in JavaScript ?
 * What is Babel?
+* What is Temporal Dead Zone in JS ?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
