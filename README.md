@@ -758,6 +758,7 @@ outer();
 * What is the most important React Hooks you used ?
 * How does Redux work ?
 * What is Redux Thunk ?
+* What is the Difference Between useEffect and useLayoutEffect ?
 
 #### Computer Science Questions:
 
