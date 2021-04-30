@@ -98,8 +98,6 @@ State Hook:
 
 This useState returns value, its accessor and is initiated at the start: const [state, setState] = useState(initialState);. Thereby in retrospective, in contrast to class components by Constructor, and state manipulated functions such as handleIncrease which was bind to this scope.
 
-https://medium.com/@chathuranga94/introduction-to-react-hooks-4694fe2d0fc0
-
 Effect Hook:
 
 Effect hook here, is used to perform side effects in functional components. From familiar user cases, it could be considered combination of methods: componentDidMount, componentDidUpdate, and componentWillUnmount. So when React renders (updates the DOM including first render) component, this hook becomes applied. Typical use cases for effect hooks are data fetching, managing subscriptions and dealing with manual DOM changes.
