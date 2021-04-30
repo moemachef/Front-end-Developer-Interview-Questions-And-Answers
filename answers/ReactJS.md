@@ -79,6 +79,10 @@ https://medium.com/@jbbpatel94/react-react-state-shared-state-lifting-state-up-a
 
 #### What is Higher-Order Components in React ?
 
+Higher-Order Components (or HOCs) in React are functions that take a component and return a new component, enhancing the original in some way.
+
+HOCs are very useful for injecting functions, state, and additional data into components as props, as well as wrapping components with styling or more JSX. Using HOCs allow us to only extend the components that need to be extended, while at the same time keeping your codebase modular by separating specialised logic from component implementations.
+
 https://medium.com/@rossbulat/how-to-use-react-higher-order-components-c0be6821eb6c
 
 
