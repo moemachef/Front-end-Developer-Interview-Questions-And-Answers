@@ -585,6 +585,8 @@ https://stackoverflow.com/questions/762011/whats-the-difference-between-using-le
 
 #### What is the difference between Promises and async-await?
 
+https://www.loginradius.com/blog/async/callback-vs-promises-vs-async-await/
+
 https://medium.com/better-programming/should-i-use-promises-or-async-await-126ab5c98789
 
 
