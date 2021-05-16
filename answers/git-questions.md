@@ -12,7 +12,7 @@ https://stackoverflow.com/questions/9339429/what-does-cherry-picking-a-commit-wi
 
 A monorepo is a version-controlled code repository that holds many projects. While these projects may be related, they are often logically independent and run by different teams.
 
-#Advantages:
+# Advantages:
 
 Visibility: everyone can see everyone else’s code. This property leads to better collaboration and cross-team contributions — a developer in a different team can fix a bug in your code you didn’t even know existed.
 
@@ -32,7 +32,7 @@ Unified CI/CD: you can use the same CI/CD deployment process for every project i
 
 Unified build process: we can use a shared build process for every application in the repo.
 
-#Disadvantages:
+# Disadvantages:
 
 Bad performance: monorepos are difficult to scale up. Commands like git blame may take unreasonably long times, IDEs begin to lag and productivity suffers, and testing the whole repo on every commit becomes infeasible.
 
