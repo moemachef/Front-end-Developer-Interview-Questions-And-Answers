@@ -628,3 +628,13 @@ The let and const variables exist in the TDZ from the start of their enclosing s
 You could also say that the variables exist in the TDZ from the place they get bound (when the variable gets bound to the scope it's inside) until it is declared (when a name is reserved in memory for that variable).
 
 https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/
+
+
+#### What is difference between regular function and arrow function in JS ?
+
+
+The behavior of this inside of an arrow function differs considerably from the regular function’s this behavior. The arrow function doesn’t define its own execution context.
+
+No matter how or where being executed, this value inside of an arrow function always equals this value from the outer function. In other words, the arrow function resolves this lexically.
+
+https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/
