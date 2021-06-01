@@ -201,6 +201,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the difference between value and reference in JavaScript ?
 * What is Babel?
 * What is Temporal Dead Zone in JS ?
+* * What is difference between regular function and arrow function in JS ?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
