@@ -762,6 +762,7 @@ outer();
 * How does Redux work ?
 * What is Redux Thunk ?
 * What is the Difference Between useEffect and useLayoutEffect ?
+* What is prop drilling ?
 
 #### Computer Science Questions:
 
