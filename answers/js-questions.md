@@ -638,3 +638,13 @@ The behavior of this inside of an arrow function differs considerably from the r
 No matter how or where being executed, this value inside of an arrow function always equals this value from the outer function. In other words, the arrow function resolves this lexically.
 
 https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/
+
+
+#### What is Polymorphism in OOP ?
+
+
+Polymorphism in Object-Oriented Programming is an ability to create a property, a function, or an object that has more than one realization.
+
+Polymorphism is an ability to substitute classes that have common functionality in sense of methods and data. In other words, it is an ability of multiple object types to implement the same functionality that can work in a different way but supports a common interface.
+
+https://medium.com/@viktor.kukurba/object-oriented-programming-in-javascript-3-polymorphism-fb564c9f1ce8
