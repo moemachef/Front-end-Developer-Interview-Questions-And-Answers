@@ -192,7 +192,6 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What are the Falsy values in JavaScript ?
 * What is the diffrence between == & ===, and what about the performance ?
 * What is the difference between a pure function & impure function?
-* What is composition in functional programming? 
 * What is a Thunk?
 * What is the difference between var, let and const in Javascript?
 * Compare between let and var regarding Scoping rules, Hoisting, Creating global object property & Redeclaration ?
@@ -205,6 +204,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is difference between regular function and arrow function in JS ?
 * OOP vs FP with Javascript.
 * What is Polymorphism in OOP ?
+* What is Composition in FP ?
 
 #### JQUERY Questions:
 * Describe event delegation in jQuery. 
