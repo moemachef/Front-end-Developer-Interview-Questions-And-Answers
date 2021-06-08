@@ -763,6 +763,7 @@ outer();
 * What is Redux Thunk ?
 * What is the Difference Between useEffect and useLayoutEffect ?
 * What is prop drilling ?
+* When to use useMemo and useCallback?
 
 #### Computer Science Questions:
 
