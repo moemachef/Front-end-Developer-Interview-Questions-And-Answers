@@ -178,3 +178,8 @@ Prop drilling is the process in a React app where props are passed from one part
 We can avoid it by useing React Context, React Context can help remove this cumbersome process of explicitly passing props around to every component in the tree for props that are required by many components in the application.
 
 https://medium.com/swlh/avoid-prop-drilling-with-react-context-a00392ee3d8
+
+
+#### When to use useMemo and useCallback?
+
+https://kentcdodds.com/blog/usememo-and-usecallback
