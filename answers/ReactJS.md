@@ -169,3 +169,12 @@ useEffect runs asynchronously and after a render is painted to the screen.
 useLayoutEffect, on the other hand, runs synchronously after a render but before the screen is updated.
 
 https://daveceddia.com/useeffect-vs-uselayouteffect/
+
+
+#### What is prop drilling ?
+
+Prop drilling is the process in a React app where props are passed from one part of a tree to another by going through other parts that do not need the data, but only help in passing it through the tree.
+
+We can avoid it by useing React Context, React Context can help remove this cumbersome process of explicitly passing props around to every component in the tree for props that are required by many components in the application.
+
+https://medium.com/swlh/avoid-prop-drilling-with-react-context-a00392ee3d8
