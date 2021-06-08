@@ -203,6 +203,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is Babel?
 * What is Temporal Dead Zone in JS ?
 * What is difference between regular function and arrow function in JS ?
+* OOP vs FP with Javascript.
 * What is Polymorphism in OOP ?
 
 #### JQUERY Questions:
