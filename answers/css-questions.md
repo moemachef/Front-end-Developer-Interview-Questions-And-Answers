@@ -331,3 +331,19 @@ If someone says "I want a pixel perfect implementation of the design in HTML" he
 - Using srcset and sizes attributes of the img HTML tag — supported by all major browsers.
 
 https://blog.imagekit.io/how-to-deliver-responsive-images-to-browsers-across-multiple-devices-30cfae17390e
+
+
+#### How CSS specificity works?
+
+If the element has inline styling, that automatically1 wins (1,0,0,0 points)
+
+For each ID value, apply 0,1,0,0 points
+
+For each class value (or pseudo-class or attribute selector), apply 0,0,1,0 points
+
+For each element reference, apply 0,0,0,1 point
+
+You can generally read the values as if they were just a number, like 1,0,0,0 is “1000”, and so clearly wins over a specificity of 0,1,0,0 or “100”. The commas are there to remind us that this isn’t really a “base 10” system, in that you could technically have a specificity value of like 0,1,13,4 – and that “13” doesn’t spill over like a base 10 system would.
+
+https://css-tricks.com/specifics-on-css-specificity/
+
