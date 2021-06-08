@@ -539,10 +539,6 @@ Characteristics of Impure functions:
 
 - They may modify the arguments which are passed to them.
 
-#### What is composition in functional programming? 
-
-Taking the output of one function and putting it directly in the input of another function, instead of calling one function and then calling another function.
-
 
 #### What is a Thunk? 
 A Thunk is a function that have everything already that need to have (doesn't need to pass arguments) to give an output back once it has been called, It contain closured state that act like a token used in application level. It act as container that we can use anywhere in the application.
@@ -652,7 +648,7 @@ Inheritance
 
 Polymorphism
 
-FP consider data and operation as two different thing. It is all about avoiding side effect and writing pure functions.Functions should not modify its outer world and its return value depends on the argument provided. It is based on different concepts like Pure function, HOF(Hige Order Function), Refrential transparency etc. In it function are first class citizen. I think in FP pure function and compose can provide you extremely powerful results.
+FP consider data and operation as two different thing. It is all about avoiding side effect and writing pure functions.Functions should not modify its outer world and its return value depends on the argument provided. It is based on different concepts like Pure function, HOF(Hige Order Function), Refrential transparency and Composition. In it function are first class citizen. I think in FP pure function and compose can provide you extremely powerful results.
 
 https://dev.to/bhaveshdaswani93/oop-vs-fp-with-javascript-39jf
 
@@ -665,3 +661,8 @@ Polymorphism in Object-Oriented Programming is an ability to create a property, 
 Polymorphism is an ability to substitute classes that have common functionality in sense of methods and data. In other words, it is an ability of multiple object types to implement the same functionality that can work in a different way but supports a common interface.
 
 https://medium.com/@viktor.kukurba/object-oriented-programming-in-javascript-3-polymorphism-fb564c9f1ce8
+
+
+#### What is Composition in FP ? 
+
+Taking the output of one function and putting it directly in the input of another function, instead of calling one function and then calling another function.
