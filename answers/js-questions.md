@@ -640,6 +640,23 @@ No matter how or where being executed, this value inside of an arrow function al
 https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/
 
 
+#### OOP vs FP with Javascript.
+
+OOP programming organizes the code as a unit. Here the unit or the object contains the information and operation that belong to same concept. The pieces of the information that reside in the unit are called attribute or state. The operation that can be happen on state are called method. The pillars of OOP are -
+
+Encapsulation
+
+Abstraction
+
+Inheritance
+
+Polymorphism
+
+FP consider data and operation as two different thing. It is all about avoiding side effect and writing pure functions.Functions should not modify its outer world and its return value depends on the argument provided. It is based on different concepts like Pure function, HOF(Hige Order Function), Refrential transparency etc. In it function are first class citizen. I think in FP pure function and compose can provide you extremely powerful results.
+
+https://dev.to/bhaveshdaswani93/oop-vs-fp-with-javascript-39jf
+
+
 #### What is Polymorphism in OOP ?
 
 
