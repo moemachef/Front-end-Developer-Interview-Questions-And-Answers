@@ -36,12 +36,12 @@ the browser will parse the HTTP response header and body, and will render the
 website. If the document contains additional assets, the browser will create
 HTTP requests for the assets and send them like above.
 
-* What are the differences between Long-Polling, Websockets and Server-Sent Events?
-* Explain the following request and response headers:
+#### What are the differences between Long-Polling, Websockets and Server-Sent Events?
+#### Explain the following request and response headers:
   * Diff. between Expires, Date, Age and If-Modified-...
   * Do Not Track
   * Cache-Control
   * Transfer-Encoding
   * ETag
   * X-Frame-Options
-* What are HTTP actions? List all HTTP actions that you know, and explain them.
+#### What are HTTP actions? List all HTTP actions that you know, and explain them.
