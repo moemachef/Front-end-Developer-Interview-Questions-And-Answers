@@ -225,7 +225,8 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Explain the difference between layout, painting and compositing.
 
 #### Network Questions:
-
+* What are HTTP status codes?
+* What is the difference between HTTP protocol and TCP protocol?
 * What is the difference between HTTP protocol and TCP protocol?
 * Traditionally, why has it been better to serve site assets from multiple domains?
 * Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
