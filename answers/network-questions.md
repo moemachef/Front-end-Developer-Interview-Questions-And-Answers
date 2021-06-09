@@ -1,5 +1,24 @@
 # Network Questions
 
+
+#### What are HTTP status codes?
+
+When client’s request to the server, server provide a HTTP (Hypertext Transfer Protocol) response status code, Which allows us to understand what is happening on the back-end of a website, determine what errors need to be fixed. All HTTP response status codes are parted into five categories.
+
+The first digit of the status code defines the categories of response. There are five values for the first digit:
+
+1xx (Informational): Request initiated by the browser is continuing.
+
+2xx (Successful): The request was successfully received, understood, and processed by the server.
+
+3xx (Redirection): Requested information that is no longer at the provided address, further action needs to be taken in order to complete the request.
+
+4xx (Client Error): When there was a problem with the request of client.
+
+5xx (Server Error): When client made a valid request, but the server is unable to complete the transfer.
+
+https://medium.com/@sahelasumi/http-status-codes-31644d99fb1
+
 #### What is the difference between HTTP protocol and TCP protocol?
 
 HTTP = Envelope/Parcel, IP = Post Office, TCP = Delivery Truck.
