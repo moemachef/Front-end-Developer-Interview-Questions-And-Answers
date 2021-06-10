@@ -59,6 +59,8 @@ If interested in getting involved, it would be the right place.
 * What are Web Components?
 * What are the differences between Angular , React and Vue?
 * What are the advantages of GraphQL over REST ?
+* What is Micro frontend ?
+* What is Domain-Driven Design?
 
 #### HTML Questions:
 
