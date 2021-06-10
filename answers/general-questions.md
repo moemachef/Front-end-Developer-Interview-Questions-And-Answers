@@ -268,3 +268,18 @@ https://medium.com/@back4apps/graphql-vs-rest-62a3d6c2021d
 
 https://www.youtube.com/watch?v=PeAOEAmR0D0
 
+####  What is Micro frontend ?
+
+Micro frontend architecture is an approach to developing web application as a composition of small frontend apps. Instead of writing a large monolith frontend application, the application is broken down into domain specific micro frontends, which are self-contained and can be developed and deployed independently.
+
+Micro frontends bring the concept and benefits of micro services to frontend applications. Each micro frontend is self-contained, which allows faster delivery as multiple teams can work on different parts of the application without affecting each other. This also gives each team the freedom to choose different technology as required. Since the micro frontends are highly decoupled, they have a lower impact on other parts of the application and can be enhanced and deployed independently.
+
+https://hub.packtpub.com/what-micro-frontend/
+
+#### What is Domain-Driven Design?
+
+Domain-Driven Design is an approach to software design that glues the system’s implementation to a constantly evolving model, leaving aside irrelevant details like programming languages, infrastructure technologies, etc…
+
+It focuses mainly on a business problem and how to strictly organize the logic that solves it. This approach was first described by Eric Evans in his book Domain-Driven Design Tackling Complexity in the Heart of Software.
+
+https://medium.com/ssense-tech/domain-driven-design-everything-you-always-wanted-to-know-about-it-but-were-afraid-to-ask-a85e7b74497a
