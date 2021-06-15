@@ -638,7 +638,11 @@ let aLet = 2;
 
 ```
 
+let and const are hoisted (like var, class and function), but there is a period between entering scope and being declared where they cannot be accessed. This period is the temporal dead zone (TDZ).
+
 https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/
+
+https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone
 
 
 #### What is difference between regular function and arrow function in JS ?
