@@ -623,6 +623,21 @@ The let and const variables exist in the TDZ from the start of their enclosing s
 
 You could also say that the variables exist in the TDZ from the place they get bound (when the variable gets bound to the scope it's inside) until it is declared (when a name is reserved in memory for that variable).
 
+let and const have two broad differences from var:
+
+1- They are block scoped.
+
+2- Accessing a var before it is declared has the result undefined; accessing a let or const before it is declared throws ReferenceError:
+
+```
+
+console.log(aVar); // undefined
+console.log(aLet); // causes ReferenceError: aLet is not defined
+var aVar = 1;
+let aLet = 2;
+
+```
+
 https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/
 
 
