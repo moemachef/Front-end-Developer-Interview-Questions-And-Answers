@@ -115,6 +115,7 @@ Reducer Hook:
 This can act as an alternative for state hook. All state changes are bundled in to central function called reducer, and state will be updated according to initiated action and existing state. Developers coming from Redux, this approach should feel familiar and state hook example is rewritten as this:
 
 https://chathuranga94.medium.com/introduction-to-react-hooks-4694fe2d0fc0
+
 https://retool.com/blog/the-react-lifecycle-methods-and-hooks-explained/
 
 
