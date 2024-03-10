@@ -769,6 +769,7 @@ outer();
 * What is the Difference Between useEffect and useLayoutEffect ?
 * What is prop drilling ?
 * When to use useMemo and useCallback?
+* What is code splitting in react ??
 
 #### Computer Science Questions:
 
