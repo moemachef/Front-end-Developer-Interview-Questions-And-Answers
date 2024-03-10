@@ -30,6 +30,7 @@ If interested in getting involved, it would be the right place.
   1. **[Node Questions](#node-questions)** - *[Answers](answers/node-questions.md)*
   1. **[Git Questions](#git-questions)** - *[Answers](answers/git-questions.md)*
   1. **[Devops Questions](#devops-questions)** - *[Answers](answers/devops-questions.md)*
+  1. **[Design Patterns Questions](#design-patterns-questions)** - *[Answers](answers/design-patterns-questions.md)*
   
 
 #### General Questions:
@@ -795,6 +796,10 @@ outer();
 * What are the differences between Grunt and Rollup?
 * What is tree shaking?
 * What is Jenkins?
+
+#### Design Patterns Questions:
+
+* What are the differences between Tight Coupling and Loose Coupling?
 
 ## License
 
