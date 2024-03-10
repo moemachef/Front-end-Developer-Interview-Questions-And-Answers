@@ -185,3 +185,13 @@ https://medium.com/swlh/avoid-prop-drilling-with-react-context-a00392ee3d8
 #### When to use useMemo and useCallback?
 
 https://kentcdodds.com/blog/usememo-and-usecallback
+
+#### What is code splitting in react?
+
+Bundlers like Webpack and Browserify (through factor-bundle) offer code splitting, which allows them to produce numerous bundles that may be dynamically loaded during runtime. Code splitting can help you "lazy-load" just the things that are currently needed by the user, which can dramatically improve the performance of your app. While you haven’t reduced the overall amount of code in your app, you’ve avoided loading code that the user may never need and reduced the amount of code needed during the initial load.
+
+When building large-scale applications, the JavaScript bundle can become quite large, which can impact the load time of the application. Code splitting is a technique where we split our code into various bundles which can then be loaded on demand or in parallel. This can significantly reduce the load time of our application and has other benefits too. Create react app does it automatically. Dynamic import syntax is supported.
+
+One of the main benefits of code splitting is that it allows us to split our code into various bundles which can then be loaded on demand or in parallel. This can significantly reduce the load time of our application, and it also allows us to split our code into smaller, more manageable chunks.
+
+https://www.dhiwise.com/post/optimizing-your-react-applications-with-webpack-code-splitting
