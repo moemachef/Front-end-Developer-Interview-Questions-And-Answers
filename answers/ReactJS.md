@@ -195,3 +195,15 @@ When building large-scale applications, the JavaScript bundle can become quite l
 One of the main benefits of code splitting is that it allows us to split our code into various bundles which can then be loaded on demand or in parallel. This can significantly reduce the load time of our application, and it also allows us to split our code into smaller, more manageable chunks.
 
 https://www.dhiwise.com/post/optimizing-your-react-applications-with-webpack-code-splitting
+
+
+#### What is Hydration in react ?
+
+Hydration in frontend (especially React) development refers to the process of making server-rendered HTML interactive by attaching JavaScript event listeners on the client side. It's a core part of Server-Side Rendering (SSR) workflows in modern frameworks like React, Next.js, Vue, etc.
+
+When a page is server-rendered (SSR), the HTML is generated on the server and sent to the browser. This allows for faster initial page loads and better SEO. However, this HTML is not interactive yet (e.g., buttons won’t work).
+
+Hydration is the process where React:
+- Loads JavaScript on the client.
+- "Reconnects" this static HTML with its underlying React component logic and event handlers.
+- Makes the page fully interactive again.
