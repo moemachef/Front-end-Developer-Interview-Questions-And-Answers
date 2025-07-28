@@ -771,6 +771,7 @@ outer();
 * What is prop drilling ?
 * When to use useMemo and useCallback?
 * What is code splitting in react ??
+* What is Hydration in react ?
 
 #### Computer Science Questions:
 
